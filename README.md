@@ -9,10 +9,10 @@ Main window (adding a folder)
 Main window (adding a folder using advanced filters)  
 ![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_folder_filters.PNG)  
 
-Scheduled task options (execution time configuration)  
+Scheduled wipe task options (execution time configuration)  
 ![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_schedule_options.PNG)  
 
-Scheduled task options (actions to run after execution)  
+Scheduled wipe task options (actions to run after execution)  
 ![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_schedule_action_custom.PNG)  
 
 PowerShell action editor (can be run after/before a wipe task)  
