@@ -4,8 +4,9 @@ SecureDelete
 Role of each component:  
 ...
 
-**[View SecureDeleteManaged class diagram (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
-**[View SecureDeleteNative class diagram (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)** 
+The following documents and diagrams present the project in more detail:  
+**[View SecureDeleteManaged diagram (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
+**[View SecureDeleteNative diagram (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)** 
 
 
 **Screenshots:**  
