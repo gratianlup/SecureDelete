@@ -1,3 +1,0 @@
-D:\SecureDelete\SDBuild\debug\SecureDeleteManaged.xml
-D:\SecureDelete\SDBuild\debug\SecureDeleteManaged.dll
-D:\SecureDelete\SDBuild\debug\SecureDeleteManaged.pdb

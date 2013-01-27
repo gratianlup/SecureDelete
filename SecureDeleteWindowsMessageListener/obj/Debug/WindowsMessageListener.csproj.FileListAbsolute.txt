@@ -1,5 +1,0 @@
-D:\SecureDelete\SDBuild\debug\SecureDeleteWindowsMessageListener.dll
-D:\SecureDelete\SDBuild\debug\SecureDeleteWindowsMessageListener.pdb
-D:\SecureDelete\SecureDelete\SecureDeleteWindowsMessageListener\obj\Debug\WindowsMessageListener.csprojResolveAssemblyReference.cache
-D:\SecureDelete\SecureDelete\SecureDeleteWindowsMessageListener\obj\Debug\SecureDeleteWindowsMessageListener.dll
-D:\SecureDelete\SecureDelete\SecureDeleteWindowsMessageListener\obj\Debug\SecureDeleteWindowsMessageListener.pdb
