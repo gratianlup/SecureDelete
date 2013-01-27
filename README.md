@@ -16,6 +16,22 @@ The following documents and diagrams present the project in more detail:
 
 
 ### Component roles:
+SecureDeleteBridgeExample:  
+SecureDeleteClient:  
+SecureDeleteCrashReporter:  
+SecureDeleteDebugger:  
+SecureDeleteFileStore:  
+SecureDeleteFileStoreBrowser:  
+SecureDeleteMMC:  
+SecureDeleteManaged:  
+SecureDeleteNative:  
+SecureDeletePluginExample:  
+SecureDeletePluginWizard:  
+SecureDeleteShellExtensionClient:  
+SecureDeleteShellExtensionNative:  
+SecureDeleteTextParser:  
+SecureDeleteWinForms:  
+SecureDeleteWindowsMessageListener:  
 
 ### Screenshots:
 
