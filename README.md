@@ -1,6 +1,10 @@
 SecureDelete
 ============
 
+Role of each component:  
+
+
+
 **Screenshots:**  
 
 Main window (adding a folder)  
