@@ -2,7 +2,7 @@ SecureDelete
 ============
 
 Role of each component:  
-
+...
 
 
 **Screenshots:**  
