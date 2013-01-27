@@ -1,4 +1,4 @@
-// Copyright (c) Gratian Lup. All rights reserved.
+// Copyright (c) 2007 Gratian Lup. All rights reserved.
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
@@ -76,13 +76,11 @@ namespace SecureDelete {
 
         public static bool WriteMinidump(IntPtr process, int processId, string path) {
             IntPtr fileHandle = CreateFile(path, 2, 0, 0, 2, 0x80, 0);
-            bool result = MiniDumpWriteDump(process, processId, fileHandle, 
-                                            MinidumpType.MiniDumpNormal, IntPtr.Zero, 
-                                            IntPtr.Zero, IntPtr.Zero);
+            bool result = MiniDumpWriteDump(process, processId, fileHandle, MinidumpType.MiniDumpNormal, 
+                                            IntPtr.Zero, IntPtr.Zero, IntPtr.Zero);
             CloseHandle(fileHandle);
             return result;
         }
-
 
         public static bool WriteMinidump(string path) {
             return WriteMinidump(GetCurrentProcess(), GetCurrentProcessId(), path);

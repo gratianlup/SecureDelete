@@ -1,6 +1,4 @@
-// Copyright (c) Gratian Lup. All rights reserved.
-// Redistribution and use in source and binary forms, with or without
-// Copyright (c) Gratian Lup. All rights reserved.
+// Copyright (c) 2005 Gratian Lup. All rights reserved.
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
@@ -36,7 +34,6 @@
 #define WIPE_H
 
 #include "wcontext.h"
-
 
 /*
 ** definitions for error messages

@@ -1,4 +1,4 @@
-// Copyright (c) Gratian Lup. All rights reserved.
+// Copyright (c) 2007 Gratian Lup. All rights reserved.
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
@@ -79,7 +79,8 @@ namespace SecureDeleteWinForms {
         }
 
         private bool IsProperty(BridgeLoggerItem member) {
-            return member.Method.Name.StartsWith("get_") || member.Method.Name.StartsWith("set_");
+            return member.Method.Name.StartsWith("get_") ||
+                   member.Method.Name.StartsWith("set_");
         }
 
         private string GetMemberName(BridgeLoggerItem member) {

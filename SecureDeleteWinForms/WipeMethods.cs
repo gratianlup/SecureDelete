@@ -1,4 +1,4 @@
-// Copyright (c) Gratian Lup. All rights reserved.
+// Copyright (c) 2007 Gratian Lup. All rights reserved.
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
@@ -91,7 +91,6 @@ namespace SecureDeleteWinForms {
 
         private void LoadMethods() {
             Debug.AssertNotNull(_methodManager, "Method manager not set");
-
             MethodList.Items.Clear();
 
             for(int i = 0; i < _methodManager.Methods.Count; i++) {
@@ -160,7 +159,8 @@ namespace SecureDeleteWinForms {
 
             // validate
             if(activeMethod.ValidateMethod() == false) {
-                MessageBox.Show("Wipe method not valid. Probably no wipe steps added.", "SecureDelete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Wipe method not valid. Probably no wipe steps added.", "SecureDelete", 
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -399,7 +399,6 @@ namespace SecureDeleteWinForms {
 
         private void AddStep() {
             Debug.AssertNotNull(activeMethod, "Active method not set");
-
             activeMethod.Steps.Add(new RandomWipeStep(activeMethod.Steps.Count));
             PopulateStepList();
 
@@ -586,7 +585,8 @@ namespace SecureDeleteWinForms {
             }
             else {
                 ShuffleFirstTextbox.Focus();
-                ErrorTooltip.Show("Invalid number. Shuffle First must be smaller than Shuffle Last.", ShuffleFirstTextbox, 3000);
+                ErrorTooltip.Show("Invalid number. Shuffle First must be smaller than Shuffle Last.", 
+                                  ShuffleFirstTextbox, 3000);
                 e.Cancel = true;
             }
         }
@@ -599,7 +599,8 @@ namespace SecureDeleteWinForms {
             }
             else {
                 ShuffleLastTextbox.Focus();
-                ErrorTooltip.Show("Invalid number. Shuffle Last must be greater than Shuffle First.", ShuffleLastTextbox, 3000);
+                ErrorTooltip.Show("Invalid number. Shuffle Last must be greater than Shuffle First.", 
+                                  ShuffleLastTextbox, 3000);
                 e.Cancel = true;
             }
         }

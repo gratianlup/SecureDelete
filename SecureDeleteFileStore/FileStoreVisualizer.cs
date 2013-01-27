@@ -1,4 +1,4 @@
-﻿// Copyright (c) Gratian Lup. All rights reserved.
+﻿// Copyright (c) 2007 Gratian Lup. All rights reserved.
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
@@ -37,28 +37,13 @@ using System.Linq;
 using System.Windows.Forms;
 
 namespace FileStore {
-    // TODO: Add the following to SomeType's definition to see this visualizer when debugging instances of SomeType:
-    // 
-    //  [DebuggerVisualizer(typeof(StoreVisualizer))]
-    //  [Serializable]
-    //  public class SomeType
-    //  {
-    //   ...
-    //  }
-    // 
     /// <summary>
     /// A Visualizer for SomeType.  
     /// </summary>
     public class StoreVisualizer : DialogDebuggerVisualizer {
         [STAThread]
         protected override void Show(IDialogVisualizerService windowService, IVisualizerObjectProvider objectProvider) {
-            // TODO: Get the object to display a visualizer for.
-            //       Cast the result of objectProvider.GetObject() 
-            //       to the type of the object being visualized.
             object data = (object)objectProvider.GetObject();
-
-            // TODO: Display your view of the object.
-            //       Replace displayForm with your own custom Form or Control.
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
@@ -72,10 +57,6 @@ namespace FileStore {
             }
         }
 
-        // TODO: Add the following to your testing code to test the visualizer:
-        // 
-        //    StoreVisualizer.TestShowVisualizer(new SomeType());
-        // 
         /// <summary>
         /// Tests the visualizer by hosting it outside of the debugger.
         /// </summary>

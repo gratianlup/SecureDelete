@@ -1,6 +1,4 @@
-// Copyright (c) 2006 Gratian Lup. All rights reserved.
-// Redistribution and use in source and binary forms, with or without
-// Copyright (c) Gratian Lup. All rights reserved.
+// Copyright (c) 2005 Gratian Lup. All rights reserved.
 // Redistribution and use in source and binary forms, with or without
 // Copyright (c) Gratian Lup. All rights reserved.
 // Redistribution and use in source and binary forms, with or without
