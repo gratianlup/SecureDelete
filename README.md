@@ -9,6 +9,10 @@ The following documents and diagrams present the project in more detail:
 **[View SecureDeleteNative diagram (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)** 
 
 
+**Architecture overview:**
+![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_architecture.PNG)  
+
+
 **Screenshots:**  
 
 Main window (adding a folder)  
