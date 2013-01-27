@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9B13A62-1C48-4893-8D94-318639A45CE5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SecureDelete</RootNamespace>
+    <AssemblyName>SecureDeleteManaged</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\SDBuild\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SecureDeleteManaged.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DebugUtils">
+      <HintPath>C:\Users\Gratian\Documents\GitHub\DebugUtils\Build\Debug\DebugUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActionExecuter.cs" />
+    <Compile Include="Actions\Default\PowerShell action\Bridge\Bridge.cs" />
+    <Compile Include="Actions\Default\PowerShell action\Bridge\BridgeFactory.cs" />
+    <Compile Include="Actions\Default\PowerShell action\PowershellAction.cs" />
+    <Compile Include="Actions\Default\PowerShell action\ScriptExecutor.cs" />
+    <Compile Include="Actions\Default\PowerShell action\Bridge\BridgeLogger.cs" />
+    <Compile Include="File Search\Filters\Image filter\ExifFilters.cs" />
+    <Compile Include="File Search\Filters\Image filter\Metadata readers\ExifReader.cs" />
+    <Compile Include="File Search\Filters\CommonFilters.cs" />
+    <Compile Include="File Search\ExpressionEvaluator.cs" />
+    <Compile Include="File Search\ExpressionTree.cs" />
+    <Compile Include="File Search\Filters\FileFilter.cs" />
+    <Compile Include="File Search\FileSearcher.cs" />
+    <Compile Include="File Search\Filters\Image filter\ImageFilter.cs" />
+    <Compile Include="Actions\Default\Basic\BasicActions.cs" />
+    <Compile Include="Actions\Default\Basic\CustomAction.cs" />
+    <Compile Include="Actions\IAction.cs" />
+    <Compile Include="File Search\Filters\Image filter\XmpFilters.cs" />
+    <Compile Include="Schedule\History\HistoryItem.cs" />
+    <Compile Include="Schedule\History\HistoryManager.cs" />
+    <Compile Include="Schedule\Task Controllers\Power controller\PowerTaskController.cs" />
+    <Compile Include="Schedule\Task Controllers\ITaskController.cs" />
+    <Compile Include="Schedule\Task Controllers\Power controller\Power Management\PowerManager.cs" />
+    <Compile Include="Schedule\Task Controllers\Power controller\Power Management\PowerNotificationsReceiver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule\Task Controllers\Power controller\Power Management\PowerNotificationsReceiver.Designer.cs">
+      <DependentUpon>PowerNotificationsReceiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\Schedule times\DailySchedule.cs" />
+    <Compile Include="Schedule\IScheduleTime.cs" />
+    <Compile Include="Actions\Default\MailAction.cs" />
+    <Compile Include="Schedule\Schedule times\MonthlySchedule.cs" />
+    <Compile Include="Schedule\Schedule times\OneTimeSchedule.cs" />
+    <Compile Include="Schedule\ScheduledTask.cs" />
+    <Compile Include="Schedule\ScheduleTimer.cs" />
+    <Compile Include="Schedule\TaskManager.cs" />
+    <Compile Include="Schedule\Schedule times\WeeklySchedule.cs" />
+    <Compile Include="SecureDeleteOptions.cs" />
+    <Compile Include="Actions\Default\PowerShell action\Bridge\Default\SessionControlBridge.cs" />
+    <Compile Include="WebReportStyle.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebReportStyle.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Wipe Objects\TestWipeObject.cs" />
+    <Compile Include="Wipe Reports\ReportExporter.cs" />
+    <Compile Include="Wipe Session\SessionLoader.cs" />
+    <Compile Include="Wipe Context &amp; Native\NativeMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wipe Session\SessionError.cs" />
+    <Compile Include="Wipe Session\SessionSaver.cs" />
+    <Compile Include="Wipe Methods\WipeSteps.cs" />
+    <Compile Include="Wipe Context &amp; Native\WipeContext.cs" />
+    <Compile Include="Wipe Methods\WipeMethod.cs" />
+    <Compile Include="Wipe Methods\WipeMethodManager.cs" />
+    <Compile Include="Wipe Objects\DriveWipeObject.cs" />
+    <Compile Include="Wipe Objects\FileWipeObject.cs" />
+    <Compile Include="Wipe Objects\FolderWipeObject.cs" />
+    <Compile Include="Wipe Objects\IWipeObject.cs" />
+    <Compile Include="Wipe Objects\PluginWipeObject.cs" />
+    <Compile Include="Wipe Session\WipeOptions.cs" />
+    <Compile Include="Wipe Plugins\IPlugin.cs" />
+    <Compile Include="Wipe Plugins\Plugin.cs" />
+    <Compile Include="Wipe Plugins\PluginAttribute.cs" />
+    <Compile Include="Wipe Plugins\PluginManager.cs" />
+    <Compile Include="Wipe Plugins\PluginReader.cs" />
+    <Compile Include="Wipe Plugins\PluginSettings.cs" />
+    <Compile Include="Wipe Reports\WipeReport.cs" />
+    <Compile Include="Wipe Reports\WipeReportManager.cs" />
+    <Compile Include="Wipe Session\WipeSession.cs" />
+    <Compile Include="Wipe Session\WipeStatus.cs" />
+    <Compile Include="File Search\Filters\Image filter\Metadata readers\XmpReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Class Diagram.cd" />
+    <None Include="SecureDeleteManaged.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Schedule\Task Controllers\Power controller\Power Management\PowerNotificationsReceiver.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PowerNotificationsReceiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebReportStyle.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>WebReportStyle.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTMLReportStyle.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="File Search\Filters\Audio filter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SecureDeleteFileStore\SecureDeleteFileStore.csproj">
+      <Project>{1e77f856-039e-40d7-a723-0d7b354f8daa}</Project>
+      <Name>SecureDeleteFileStore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

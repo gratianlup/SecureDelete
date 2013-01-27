@@ -1,0 +1,9 @@
+; SDShellNative.def : Declares the module parameters.
+
+LIBRARY      "SecureDeleteShellExtensionNative.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

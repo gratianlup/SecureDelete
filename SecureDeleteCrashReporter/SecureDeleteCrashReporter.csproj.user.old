@@ -1,0 +1,5 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartWorkingDirectory>C:\Users\LG\Documents\Visual Studio 2005\Projects\SecureDelete\SecureDelete\bin\Debug\</StartWorkingDirectory>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,142 @@
+// ***************************************************************
+//  SecureDelete   version:  1.0
+//  -------------------------------------------------------------
+//
+//  Copyright (C) 2007 Lup Gratian - All Rights Reserved
+//   
+// ***************************************************************      
+using System;
+using System.Collections.Generic;
+using System.Text;
+using DebugUtils.Debugger;
+using Microsoft.Win32;
+using System.Collections.ObjectModel;
+using System.Management.Automation;
+using System.Management.Automation.Runspaces;
+using System.IO;
+using System.Reflection;
+
+namespace SecureDelete.Actions
+{
+	public class BridgeFactory
+	{
+		public static List<Type> GetBridgeObjectsTypes(Assembly assembly)
+		{
+			List<Type> bridgeObjects = new List<Type>();
+
+			// search the bridge objects in the exposed types
+			foreach (Type type in assembly.GetExportedTypes())
+			{
+				object[] attributes = type.GetCustomAttributes(typeof(Bridge), false);
+
+				if (attributes.Length > 0 && ((Bridge)attributes[0]).Exposed)
+				{
+					// add to the list
+					bridgeObjects.Add(type);
+				}
+			}
+
+			return bridgeObjects;
+		}
+
+		public static List<Type> GetBridgeObjectsTypes()
+		{
+			return GetBridgeObjectsTypes(Assembly.GetExecutingAssembly());
+		}
+
+
+		public static List<IBridge> GetInstantiatedBridgeObjects(List<Type> types)
+		{
+			List<IBridge> bridgeObjects = new List<IBridge>();
+
+			// create the instances
+			try
+			{
+				foreach (Type type in types)
+				{
+					bridgeObjects.Add((IBridge)Activator.CreateInstance(type));
+				}
+			}
+			catch (Exception e)
+			{
+				Debug.ReportError("Error while instantiating bridge object. Exception {0}", e.Message);
+				return new List<IBridge>();
+			}
+
+			return bridgeObjects;
+		}
+
+
+		/// <summary>
+		///  Instantiate the bridge objects found in the given assembly.
+		/// </summary>
+		public static List<IBridge> GetBridgeObjects(Assembly assembly)
+		{
+			List<Type> types = GetBridgeObjectsTypes(assembly);
+
+			if (types != null)
+			{
+				return GetInstantiatedBridgeObjects(types);
+			}
+
+			// nothing found
+			return new List<IBridge>();
+		}
+
+		/// <summary>
+		///  Instantiate the bridge objects found in the executing assembly.
+		///  </summary>
+		public static List<IBridge> GetBridgeObjects()
+		{
+			return GetBridgeObjects(Assembly.GetExecutingAssembly());
+		}
+
+
+		public static Assembly LoadAssembly(string path)
+		{
+			Assembly assembly = null;
+			path = Environment.ExpandEnvironmentVariables(path);
+
+			if (Path.IsPathRooted(path) == false)
+			{
+				path = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), path);
+			}
+
+			// load the assembly
+			try
+			{
+				assembly = Assembly.Load(path);
+			}
+			catch (IOException)
+			{
+				try
+				{
+					assembly = Assembly.LoadFile(path);
+				}
+				catch
+				{
+					return null;
+				}
+			}
+
+			return assembly;
+		}
+
+		/// <summary>
+		///  Instantiate the bridge objects found in the assembly located at the given path.
+		///  </summary>
+		public static List<IBridge> GetBridgeObjects(string path)
+		{
+			Assembly assembly = LoadAssembly(path);
+
+			if (assembly != null)
+			{
+				return GetBridgeObjects(assembly);
+			}
+			else
+			{
+				return new List<IBridge>();
+			}
+		}
+	}
+}

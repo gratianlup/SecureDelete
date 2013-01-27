@@ -1,0 +1,50 @@
+HKCR
+{	
+	NoRemove *
+	{
+		NoRemove ShellEx
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove SDShellExt = s '{1A0EB35B-FD10-4B27-9679-843243151960}'
+			}
+		}
+	}
+	
+	NoRemove Folder
+	{
+		NoRemove ShellEx
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove SDShellExt = s '{1A0EB35B-FD10-4B27-9679-843243151960}'
+			}
+			NoRemove DragDropHandlers
+			{
+				ForceRemove SDShellExt = s '{1A0EB35B-FD10-4B27-9679-843243151960}'
+			}
+		}
+	}
+	
+	NoRemove Directory
+	{
+		NoRemove shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove SDShellExt = s '{1A0EB35B-FD10-4B27-9679-843243151960}'
+			}
+		}
+	}
+  
+	NoRemove Drive
+	{
+		NoRemove shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove SDShellExt = s '{1A0EB35B-FD10-4B27-9679-843243151960}'
+			}
+		}
+	}
+}

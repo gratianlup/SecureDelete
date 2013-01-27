@@ -1,0 +1,1506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Plugin">
+    <Position X="0.5" Y="27" Height="0.291" Width="7.262" />
+  </Comment>
+  <Comment CommentText="File Searcher">
+    <Position X="13.24" Y="27.021" Height="0.291" Width="15.337" />
+  </Comment>
+  <Comment CommentText="Wipe Objects">
+    <Position X="13" Y="0.75" Height="0.291" Width="4.276" />
+  </Comment>
+  <Comment CommentText="Wipe Results">
+    <Position X="18.528" Y="0.75" Height="0.291" Width="5.58" />
+  </Comment>
+  <Comment CommentText="Wipe Report">
+    <Position X="25.25" Y="0.75" Height="0.291" Width="7.955" />
+  </Comment>
+  <Comment CommentText="Wipe Methods">
+    <Position X="31.25" Y="27" Height="0.291" Width="9.212" />
+  </Comment>
+  <Comment CommentText="Wipe Session">
+    <Position X="0.5" Y="0.75" Height="0.291" Width="11.235" />
+  </Comment>
+  <Comment CommentText="Scheduled Tasks">
+    <Position X="12.99" Y="12.443" Height="0.291" Width="15.281" />
+  </Comment>
+  <Comment CommentText="XMP based">
+    <Position X="12.004" Y="45.396" Height="0.291" Width="5.031" />
+  </Comment>
+  <Comment CommentText="Actions">
+    <Position X="34.74" Y="0.693" Height="0.291" Width="19.198" />
+  </Comment>
+  <Comment CommentText="Task Controllers">
+    <Position X="31.49" Y="12.276" Height="0.291" Width="8.239" />
+  </Comment>
+  <Comment CommentText="Task Controllers">
+    <Position X="41.75" Y="12.25" Height="0.291" Width="6.471" />
+  </Comment>
+  <Class Name="SecureDelete.NativeMethods" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gBsASACwCAAABAADIBAAhgCEmQCgAKAVAAAIDAAFAgA=</HashCode>
+      <FileName>Wipe Context &amp; Native\NativeMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.WipeContext">
+    <Position X="6.5" Y="4.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IFNQABgUCAAgRAABIBAAAAAAAgAAAIACEAAABkCBAgA=</HashCode>
+      <FileName>Wipe Context &amp; Native\WipeContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecureDelete.WipeMethod" BaseTypeListCollapsed="true">
+    <Position X="31.25" Y="27.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABADIFAHAAAgBAAEgSBAACYAACAAAAAAAAQAAAgAEBA=</HashCode>
+      <FileName>Wipe Methods\WipeMethod.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Steps" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.WipeMethodManager">
+    <Position X="31.25" Y="32.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Methods" Type="SecureDelete.WipeMethod">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.185" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAIACAACAAAIAgAAAAAAAAAAAAAAAAACAAAABJEQ=</HashCode>
+      <FileName>Wipe Methods\WipeMethodManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Methods" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.WipeStepBase">
+    <Position X="36.5" Y="29.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAQAAEAAAAAAAAAAAAAAAQAAAABAABA=</HashCode>
+      <FileName>Wipe Methods\WipeSteps.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.PatternWipeStep">
+    <Position X="39.25" Y="32.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Wipe Methods\WipeSteps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.RandomWipeStep">
+    <Position X="34" Y="32.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Wipe Methods\WipeSteps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.RandomByteStep">
+    <Position X="35.75" Y="32.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Wipe Methods\WipeSteps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.ComplementStep">
+    <Position X="37.5" Y="32.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Wipe Methods\WipeSteps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.WipeStatistics" BaseTypeListCollapsed="true">
+    <Position X="22" Y="6" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAEAAAAAIABCAQAACBCAAAAAIAgkAAAAAAAAgEAEABA=</HashCode>
+      <FileName>Wipe Reports\WipeReport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecureDelete.WipeReport">
+    <Position X="25.25" Y="1.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Statistics" Type="SecureDelete.WipeStatistics">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.227" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="FailedObjects" Type="SecureDelete.FailedObject" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="26.25" Y="1.75" />
+        <Point X="26.25" Y="1.24" />
+        <Point X="19.5" Y="1.24" />
+        <Point X="19.5" Y="1.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAQAEAACAABAAEAAAAAAAAAAAAAgEAAA=</HashCode>
+      <FileName>Wipe Reports\WipeReport.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Statistics" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="FailedObjects" />
+      <Property Name="Errors" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.ReportCategory">
+    <Position X="31.5" Y="1.75" Width="1.5" />
+    <AssociationLine Name="Reports" Type="SecureDelete.ReportInfo">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.06" Y="0.277" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAABAAA=</HashCode>
+      <FileName>Wipe Reports\WipeReportManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Reports" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.ReportInfo" BaseTypeListCollapsed="true">
+    <Position X="31.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAhAAAAQAAAAAAAAAAAAABAAAAgEAAAAAAAA=</HashCode>
+      <FileName>Wipe Reports\WipeReportManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecureDelete.WipeReportManager">
+    <Position X="27.75" Y="1.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIIAAIIBAYAIAAAAAAAQAoAIAAgEFRYCCAAQADiACAA=</HashCode>
+      <FileName>Wipe Reports\WipeReportManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Categories" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.WipeError">
+    <Position X="22" Y="1.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAEAAAIAQAAQE=</HashCode>
+      <FileName>Wipe Session\SessionError.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Severity" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecureDelete.FailedObject">
+    <Position X="18.5" Y="1.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAYAAAAAACAAAAAAAAAAAQAAAACgAAA=</HashCode>
+      <FileName>Wipe Session\SessionError.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AssociatedError" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecureDelete.SessionLoader" Collapsed="true">
+    <Position X="10" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Wipe Session\SessionLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.SessionSaver" Collapsed="true">
+    <Position X="10" Y="7" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIA=</HashCode>
+      <FileName>Wipe Session\SessionSaver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.RandomOptions">
+    <Position X="7" Y="12.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAIAkAEAACAAAAAAAAAIQABAAAABAAAQAgAAgAAABA=</HashCode>
+      <FileName>Wipe Session\WipeOptions.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RandomProvider" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.WipeOptions">
+    <Position X="3.25" Y="12.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABYABAAAiAAAGAKAAQCADIEBQhARBAQBoCBSFAQEhA=</HashCode>
+      <FileName>Wipe Session\WipeOptions.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RandomOptions" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.WipeSession">
+    <Position X="3.25" Y="4.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Options" Type="SecureDelete.WipeOptions">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.06" Y="0.443" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AUUiMAAEEiIBDYAEABwABhAsANQAQgUUYQAAQKhBAgE=</HashCode>
+      <FileName>Wipe Session\WipeSession.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Context" />
+      <Property Name="Options" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.WipeStatus">
+    <Position X="18.5" Y="4.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIADKIEIAAgYAEAgAFAEgAKAgBAAAAoAEIACkGCAAAA=</HashCode>
+      <FileName>Wipe Session\WipeStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ExpressionEvaluator">
+    <Position X="22.5" Y="35.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SecureDelete.FileSearch.ExpressionEvaluator.ElementType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>File Search\ExpressionEvaluator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Struct Name="SecureDelete.FileSearch.ExpressionEvaluator.ExpressionElement" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>File Search\ExpressionEvaluator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAACAIAgAJgAAABDAAAIKAAAAAAAAgAEAAA=</HashCode>
+      <FileName>File Search\ExpressionEvaluator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ExpressionNode">
+    <Position X="24.5" Y="27.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAACQCAAAAAABA=</HashCode>
+      <FileName>File Search\ExpressionTree.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Type" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImplicationNode">
+    <Position X="23.5" Y="30.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>File Search\ExpressionTree.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Implication" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecureDelete.FileSearch.FilterNode">
+    <Position X="25.75" Y="30.75" Width="1.5" />
+    <AssociationLine Name="Filter" Type="SecureDelete.FileSearch.FilterBase">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="7.547" Y="1.373" Height="0.182" Width="0.618" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>File Search\ExpressionTree.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Filter" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ExpressionTree" BaseTypeListCollapsed="true">
+    <Position X="20" Y="27.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Root" Type="SecureDelete.FileSearch.ExpressionNode">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.235" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAEAAAAQQCAAAAAAAQAAgAAACAAEAABAAAEICBA=</HashCode>
+      <FileName>File Search\ExpressionTree.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Root" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ExpressionTreeBuilder">
+    <Position X="20" Y="31.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAACA=</HashCode>
+      <FileName>File Search\ExpressionTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.FilterBase">
+    <Position X="16.75" Y="32.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgIAAAAACAAIAAAgAAAAQgAAgAAAAQAAAAAAAAABA=</HashCode>
+      <FileName>File Search\Filters\FileFilter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Condition" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecureDelete.FileSearch.SizeFilter">
+    <Position X="18.75" Y="35.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAEAIAAIAAAgAAAAAAAAAAACAAAAAAAAAEABA=</HashCode>
+      <FileName>File Search\Filters\CommonFilters.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SizeImplication" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.DateFilter">
+    <Position X="16.75" Y="35.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAAgAAAAAAAAAAAAAgCAAAAAAAAAAAAgIEAAAAAAABA=</HashCode>
+      <FileName>File Search\Filters\CommonFilters.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DateImplication" />
+      <Property Name="DateType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.AttributeFilter">
+    <Position X="14.75" Y="35.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAkAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>File Search\Filters\CommonFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.FileFilter" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="27.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Filters" Type="SecureDelete.FileSearch.FilterBase">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.765" Y="0.185" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQABAAAIAASAIAAAJIQAACBgAIAEAAQEAAAAAAEABA=</HashCode>
+      <FileName>File Search\Filters\FileFilter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExpressionTree" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Filters" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.FileSearch.FileSearchArgs" Collapsed="true">
+    <Position X="13.25" Y="33.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>File Search\FileSearcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.FileSearcher">
+    <Position X="13.25" Y="27.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="SecureDelete.FileSearch.FileSearcher.ThreadParams" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>File Search\FileSearcher.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAAKCAACIwIAJAAAAQSEAABAAICgAAAgMAAEwAACAYA=</HashCode>
+      <FileName>File Search\FileSearcher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FileFilter" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecureDelete.WipeObjects.DriveWipeObject" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="5.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IQAAAAEAIQAAIAAAAAAACBCAIAIAoAAAMYEAAIBAAAA=</HashCode>
+      <FileName>Wipe Objects\DriveWipeObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.WipeObjects.FileWipeObject" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAQACIAIAAAAAAAAAAAIAAAAAIQAAAIBAAAA=</HashCode>
+      <FileName>Wipe Objects\FileWipeObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.WipeObjects.FolderWipeObject" BaseTypeListCollapsed="true">
+    <Position X="13" Y="5.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="SecureDelete.WipeObjects.FolderWipeObject.IntComparer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wipe Objects\FolderWipeObject.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAIQUCJAIiAAEAUABAAAIAAhAAIQCEgIBAQAA=</HashCode>
+      <FileName>Wipe Objects\FolderWipeObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.WipeObjects.PluginWipeObject" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="1.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EUAAAAEAAQCAIAADAIAgIAAEAAIAAAAAIQgIAIBAAAA=</HashCode>
+      <FileName>Wipe Objects\PluginWipeObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.WipePlugin.Plugin">
+    <Position X="3.5" Y="27.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABCBAEAAAVkAAAEgCQAAAQAKEQgAAAAQAAAAAgAAAA=</HashCode>
+      <FileName>Wipe Plugins\Plugin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AttributeObject" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecureDelete.WipePlugin.PluginAttribute">
+    <Position X="3.25" Y="32.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACIAABAAQgAEAEgABAAAQAAEAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Wipe Plugins\PluginAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.WipePlugin.PluginManager">
+    <Position X="0.5" Y="27.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAQAAAAAAAAAAAAEAAACQAAAAgAAAAAQAAA=</HashCode>
+      <FileName>Wipe Plugins\PluginManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Plugins" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.WipePlugin.PluginReader">
+    <Position X="0.5" Y="30.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Wipe Plugins\PluginReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.WipePlugin.PluginSettings">
+    <Position X="5.75" Y="27.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SecureDelete.WipePlugin.PluginSettings.AutoSaveMethod">
+        <TypeIdentifier>
+          <NewMemberFileName>Wipe Plugins\PluginSettings.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAIAAAIAgBAAAAAAAAASAAACACQEgAABAAhA=</HashCode>
+      <FileName>Wipe Plugins\PluginSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Schedule.WeeklySchedule" Collapsed="true">
+    <Position X="22.5" Y="19.5" Width="1.5" />
+    <AssociationLine Name="Days" Type="SecureDelete.Schedule.WeekDay">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.185" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAUABEFAAAAAAAAAIQAAAEAQAAAEQQAAIAAAADA=</HashCode>
+      <FileName>Schedule\Schedule times\WeeklySchedule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Days" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecureDelete.Schedule.MonthlySchedule" Collapsed="true">
+    <Position X="24.25" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAECBAFgAAAAAAAAAQAAAFAQAAAEQQAAIAAAADA=</HashCode>
+      <FileName>Schedule\Schedule times\MonthlySchedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Schedule.ScheduleBase" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="15" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAEgAIAAAAAAAAAAAEAQAAAYAQAAAAAAATA=</HashCode>
+      <FileName>Schedule\IScheduleTime.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Time" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.Schedule.ScheduledTask" BaseTypeListCollapsed="true">
+    <Position X="16" Y="13.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IGAypAlEAZAgkKCEAQEICbQAAExAAEgUJIEUAA5IABA=</HashCode>
+      <FileName>Schedule\ScheduledTask.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+      <Property Name="Schedule" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.Schedule.DailySchedule" Collapsed="true">
+    <Position X="20.75" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEABAEAAAAAAAAAAQAAAEAQAAAEAQAAAAAAADA=</HashCode>
+      <FileName>Schedule\Schedule times\DailySchedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Schedule.ScheduleTime" BaseTypeListCollapsed="true">
+    <Position X="23.75" Y="15.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAgAQAAAAAAAAAAABA=</HashCode>
+      <FileName>Schedule\IScheduleTime.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecureDelete.Schedule.ScheduleTimer" Collapsed="true">
+    <Position X="26" Y="14.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAQAIAAAAEAAIAAAAAgAAAQA=</HashCode>
+      <FileName>Schedule\ScheduleTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Schedule.TaskManager">
+    <Position X="13" Y="13.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAoMBCAAgYAIAAQcAAApQBMAAACAICAQgAQIECNlECE=</HashCode>
+      <FileName>Schedule\TaskManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TaskHistory" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="TaskList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.Schedule.OneTimeSchedule" Collapsed="true">
+    <Position X="19" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEABAEAAAAAAAAAAQAAAEAQAAAEAQAAAAAAADA=</HashCode>
+      <FileName>Schedule\Schedule times\OneTimeSchedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ExifReader">
+    <Position X="5.75" Y="37.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SecureDelete.FileSearch.ExifReader.ImageOrientation" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>File Search\ExifReader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Class Name="SecureDelete.FileSearch.ExifReader.Fraction" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>File Search\ExifReader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="SecureDelete.FileSearch.ExifReader.ExposureProgram" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>File Search\ExifReader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="SecureDelete.FileSearch.ExifReader.MeteringMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>File Search\ExifReader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>RAQAAYABwgGEYTAEGAAAAQAgEIAQAQAAAhIAQAAAAAA=</HashCode>
+      <FileName>File Search\Filters\Image filter\Metadata readers\ExifReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageCameraMakerFilter" Collapsed="true">
+    <Position X="17.5" Y="40.75" Width="1.5" />
+    <InheritanceLine Type="SecureDelete.FileSearch.ImageTextFilter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="41.441" />
+        <Point X="14.5" Y="41.595" />
+        <Point X="18.25" Y="41.595" />
+        <Point X="18.25" Y="41.441" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageCameraModelFilter" Collapsed="true">
+    <Position X="15.75" Y="41.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageCopyrightFilter" Collapsed="true">
+    <Position X="15.75" Y="42.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageData">
+    <Position X="10.5" Y="36.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAABAAAIARAAAQAAAAAAAAA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ImageFilter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageDateTakenFilter" Collapsed="true">
+    <Position X="8" Y="40.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAiAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageExposureBiasFilter" Collapsed="true">
+    <Position X="11.5" Y="40.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageExposureProgramFilter" Collapsed="true">
+    <Position X="11.5" Y="41.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAiAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageExposureTimeFilter" Collapsed="true">
+    <Position X="9.75" Y="42.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAEAAAAAAAAAAQAAAAAAAQACAAAAAiAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageFilter">
+    <Position X="12.5" Y="35.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SecureDelete.FileSearch.ImageFilter.ImageProperty" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>File Search\Filters\Image Filter\ImageFilter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQgAQAAAAAAAAAIAAAAACAAAAAAA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ImageFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageFilterProvider">
+    <Position X="10.5" Y="35.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ImageFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageFlashFiredFilter" Collapsed="true">
+    <Position X="8" Y="41.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAiAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageFNumberFilter" Collapsed="true">
+    <Position X="8" Y="42.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageFocalLengthFilter" Collapsed="true">
+    <Position X="11.5" Y="42.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageIsoFilter" Collapsed="true">
+    <Position X="8" Y="39.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageMeteringModeFilter" Collapsed="true">
+    <Position X="9.75" Y="40.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAiAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageOrientationFilter" Collapsed="true">
+    <Position X="9.75" Y="41.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAiAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageSoftwareFilter" Collapsed="true">
+    <Position X="17.5" Y="41.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageTextFilter" Collapsed="true">
+    <Position X="13.75" Y="40.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAQAAAAAAQQACAAAAABAAAAAAAAgAAAAEAA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ImageFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageTitleFilter" Collapsed="true">
+    <Position X="15.5" Y="44.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.Bridge" Collapsed="true">
+    <Position X="47.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEAIAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\Bridge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.BridgeFactory" Collapsed="true">
+    <Position X="49.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAEAgAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\BridgeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.BridgeMember" Collapsed="true">
+    <Position X="47.5" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAgAAAEACAAAAQAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\Bridge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.BridgeMemberParameter" Collapsed="true">
+    <Position X="47.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAACAAAgAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\Bridge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.CustomAction">
+    <Position X="37.25" Y="2.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Variables" Type="SecureDelete.Actions.EnvironmentVariable" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="39.25" Y="7.073" />
+        <Point X="40.375" Y="7.073" />
+        <Point X="40.375" Y="5.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BCUgAAAAACIAAYgQAIAIAAoIBAAEAAUyYgQAAhAEEBA=</HashCode>
+      <FileName>Actions\Default\Basic\CustomAction.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Variables" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.Actions.LogoffAction" Collapsed="true">
+    <Position X="39.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Actions\Default\Basic\BasicActions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.MailAction" BaseTypeListCollapsed="true">
+    <Position X="34.5" Y="2.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACUDAAQgASABA4wQQKBAAAgACCAAAIQyoAAABhAkABA=</HashCode>
+      <FileName>Actions\Default\MailAction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.Actions.PowershellAction" BaseTypeListCollapsed="true">
+    <Position X="41.75" Y="2.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACUgQCAACCIAIYhQkICEEgiIJAAAEARyIgCAAhAkABA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\PowershellAction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.Actions.RestartAction" Collapsed="true">
+    <Position X="36" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Actions\Default\Basic\BasicActions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.ScriptExecutor">
+    <Position X="44.25" Y="3.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACAAAEQHAAAEgAAAAAAAAAAAAAAAQAIIAAAAAIAIAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\ScriptExecutor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="BridgeList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.Actions.SessionControlBridge" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="47.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ggAAAgAA0AIAISgAAAAABAUAMAAIAABggAAACJCAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\Default\SessionControlBridge.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.Actions.ShutdownAction" Collapsed="true">
+    <Position X="37.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Actions\Default\Basic\BasicActions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.MethodParameterInfo" Collapsed="true">
+    <Position X="52.25" Y="5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\BridgeLogger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.BridgeLoggerItem">
+    <Position X="49.5" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAkAAAAAABgAAAAAAAAAAAAAIAAAAAAAQA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\BridgeLogger.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Parameters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.Actions.BridgeLogger">
+    <Position X="49.5" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEACAAQAAAAAAAAABAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\BridgeLogger.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.Actions.PropertyReader" Collapsed="true">
+    <Position X="49.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\BridgeLogger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Schedule.HistoryCategory" Collapsed="true">
+    <Position X="16" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schedule\History\HistoryManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.Schedule.HistoryItem">
+    <Position X="18.5" Y="21.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>hAUAAAAAIAAAAAAFAEACABAIMAAgAAAAABAAAAgAAAA=</HashCode>
+      <FileName>Schedule\History\HistoryItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Schedule.HistoryManager">
+    <Position X="13.25" Y="22.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAgAQAAAAAAABhAAAAAAEgAAAAAAAABCAAA=</HashCode>
+      <FileName>Schedule\History\HistoryManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Categories" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.XmpReader">
+    <Position X="3.25" Y="37.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAQAAAAAAAAAAAAAAIEABAICAAAAAAAAABAAA=</HashCode>
+      <FileName>File Search\Filters\Image filter\Metadata readers\XmpReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageRatingFilter" Collapsed="true">
+    <Position X="13.75" Y="44.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\XmpFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.FileSearch.ImageAuthorFilter" Collapsed="true">
+    <Position X="12" Y="44.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>File Search\Filters\Image filter\ExifFilters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.EnvironmentVariable" Collapsed="true">
+    <Position X="39.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Actions\Default\Basic\CustomAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Actions.ActionErrorReporter">
+    <Position X="41.75" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Actions\IAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Schedule.PowerNotificationsReceiver" Collapsed="true">
+    <Position X="37" Y="14.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAUAJgABCABACQEAAiEAQCCAAAgRAEgAAAEwAkAQAE=</HashCode>
+      <FileName>Schedule\Task Controllers\Power controller\Power Management\PowerNotificationsReceiver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.Schedule.PowerTaskController" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="14.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAIAAAIAAiAAQQAAQIAAAAAAAgQAAAAQAACA=</HashCode>
+      <FileName>Schedule\Task Controllers\Power controller\PowerTaskController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecureDelete.Schedule.PowertTCSettings" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="13.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAIAAAAAAAgAAgAAAAQAAAAAEgQAAAAAAACA=</HashCode>
+      <FileName>Schedule\Task Controllers\Power controller\PowerTaskController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecureDelete.Schedule.PowerManager">
+    <Position X="34" Y="13.75" Width="2" />
+    <NestedTypes>
+      <Enum Name="SecureDelete.Schedule.PowerManager.BatteryFlag" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Schedule\Task Controllers\Power controller\Power Management\PowerManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Class Name="SecureDelete.Schedule.PowerManager.SystemPowerStatus" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Schedule\Task Controllers\Power controller\Power Management\PowerManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="SecureDelete.Schedule.PowerManager.ACLineStatus" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Schedule\Task Controllers\Power controller\Power Management\PowerManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACIigAAQCAAAAAAAAQQAABQJJAAAEASAQRA=</HashCode>
+      <FileName>Schedule\Task Controllers\Power controller\Power Management\PowerManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="receiver" />
+      <Property Name="PowerSource" />
+      <Property Name="PowerScheme" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecureDelete.FileStore">
+    <Position X="41.75" Y="12.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AwQEkoAAAIAQQDAIJAQAGAAAABgAQSSACgEEyABACgA=</HashCode>
+      <FileName>File Store\FileStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecureDelete.StoreFile" BaseTypeListCollapsed="true">
+    <Position X="44.5" Y="13.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAhAAAAgAAAAAAAAASAAAAgABAAAQAAAAAAAAA=</HashCode>
+      <FileName>File Store\StoreItems.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.StoreFolder" BaseTypeListCollapsed="true">
+    <Position X="46.5" Y="13.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAIAAAAAAAAQAAAAAAAAAAQAAAAACAIA=</HashCode>
+      <FileName>File Store\StoreItems.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecureDelete.StoreData">
+    <Position X="44.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAIAAAoA=</HashCode>
+      <FileName>File Store\FileStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SecureDelete.WipePlugin.StoreId" Collapsed="true">
+    <Position X="5.75" Y="33.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAQAAAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Wipe Plugins\PluginSettings.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SecureDelete.WipePlugin.StoreItem" Collapsed="true">
+    <Position X="5.75" Y="33" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAgA=</HashCode>
+      <FileName>Wipe Plugins\PluginSettings.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="SecureDelete.IWipeObject">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAAIAAAAAAAAAAAAAIAAAAAIQAAAABAAAA=</HashCode>
+      <FileName>Wipe Objects\IWipeObject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="SecureDelete.WipePlugin.IPlugin">
+    <Position X="0.5" Y="32.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAgASAAAAIAIAgAAAIAAAAABgAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Wipe Plugins\IPlugin.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecureDelete.Schedule.ISchedule">
+    <Position X="21.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAEAAIAAAAAAAAAAAEAQAAAIAQAAAAAAATA=</HashCode>
+      <FileName>Schedule\IScheduleTime.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecureDelete.Actions.IAction">
+    <Position X="39.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAACAAAYgQAIAAAAAAAAAAAAAAIAAAAAAEABA=</HashCode>
+      <FileName>Actions\IAction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecureDelete.Actions.IBridge" Collapsed="true">
+    <Position X="47.5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAIAIAAAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\Bridge.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecureDelete.Actions.IFullAccessBridge" Collapsed="true">
+    <Position X="47.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\Bridge\Bridge.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecureDelete.Schedule.ITaskController" Collapsed="true">
+    <Position X="31.5" Y="12.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAIAAAAAQQAAAAAAAAAAAgQAAAAAAACA=</HashCode>
+      <FileName>Schedule\Task Controllers\ITaskController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecureDelete.Schedule.ITaskControllerSettings" Collapsed="true">
+    <Position X="34" Y="12.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Schedule\Task Controllers\ITaskController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecureDelete.IStoreItem" Collapsed="true">
+    <Position X="44.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>File Store\StoreItems.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SecureDelete.ContextStatus">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Wipe Context &amp; Native\WipeContext.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.WipeStepType">
+    <Position X="39" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAABQAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Wipe Methods\WipeSteps.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.WipeObjectType">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAIAAAAAAACEAAAAAAAEgAAAAAAAAAAABAA=</HashCode>
+      <FileName>Wipe Objects\IWipeObject.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.ErrorSeverity">
+    <Position X="22.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Wipe Session\SessionError.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.RandomProvider">
+    <Position X="10.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Wipe Session\WipeOptions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.SessionStatus">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAIAAAAAAAAAAAAAAAAAAAAEBAAIAIAAAAA=</HashCode>
+      <FileName>Wipe Session\WipeSession.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.FileSearch.ExpressionType">
+    <Position X="27" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>File Search\ExpressionTree.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.FileSearch.FilterImplication">
+    <Position X="23.5" Y="32.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>File Search\ExpressionTree.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.FileSearch.TreeDirection">
+    <Position X="25" Y="35.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAA=</HashCode>
+      <FileName>File Search\ExpressionTree.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.FileSearch.FilterCondition">
+    <Position X="20" Y="33.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>File Search\Filters\FileFilter.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.FileSearch.SizeImplication">
+    <Position X="18.5" Y="38.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>File Search\Filters\FileFilter.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.FileSearch.DateImplication">
+    <Position X="16.75" Y="38.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>File Search\Filters\FileFilter.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.FileSearch.FileDateType">
+    <Position X="15" Y="38.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAQAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>File Search\Filters\CommonFilters.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.Schedule.ScheduleType">
+    <Position X="19.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAgAAAAAAAgAAAAAAgA=</HashCode>
+      <FileName>Schedule\IScheduleTime.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.Schedule.TaskStatus">
+    <Position X="19.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAACAIAAAAAAAAAAAAAQAAAAAAAIAAAQAAAAAQ=</HashCode>
+      <FileName>Schedule\ScheduledTask.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.Schedule.WeekDay" Collapsed="true">
+    <Position X="22.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAIAACAAAAAAAAAAACAAIACAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schedule\Schedule times\WeeklySchedule.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.Schedule.PowerScheme">
+    <Position X="37.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAACAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schedule\Task Controllers\Power controller\Power Management\PowerManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.Schedule.PowerSource">
+    <Position X="37.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schedule\Task Controllers\Power controller\Power Management\PowerManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecureDelete.Schedule.ControllerType">
+    <Position X="31.5" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Schedule\Task Controllers\ITaskController.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="SecureDelete.FileSearch.FileSearchDelegate" Collapsed="true">
+    <Position X="13.25" Y="34" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>File Search\FileSearcher.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SecureDelete.Schedule.TaskStatusChangedDelegate" Collapsed="true">
+    <Position X="26" Y="16" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Schedule\ScheduledTask.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SecureDelete.Schedule.TaskStartedDelegate" Collapsed="true">
+    <Position X="26" Y="16.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schedule\ScheduledTask.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SecureDelete.Schedule.TaskCompletedDelegate" Collapsed="true">
+    <Position X="26" Y="15.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schedule\ScheduledTask.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SecureDelete.Schedule.ManagerTaskStatusChangedDelegate" Collapsed="true">
+    <Position X="26" Y="17.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Schedule\TaskManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SecureDelete.Actions.ScriptNewOutputDelegate" Collapsed="true">
+    <Position X="38.75" Y="10" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\ScriptExecutor.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SecureDelete.Actions.ScriptStateChangedDelegate" Collapsed="true">
+    <Position X="36" Y="10" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Actions\Default\PowerShell action\ScriptExecutor.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

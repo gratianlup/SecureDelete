@@ -1,0 +1,931 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FFEBEFD-AA25-4459-BC42-D6A406B25B22}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SecureDeleteWF</RootNamespace>
+    <AssemblyName>SecureDeleteWF</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\SDBuild\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>..\..\SDBuild\debug\SecureDeleteWF.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\SDBuild\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\Editors\PowerShell\PowerShellScriptEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actions\Editors\PowerShell\PowerShellScriptEditor.Designer.cs">
+      <DependentUpon>PowerShellScriptEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\LogOptionsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Options\LogOptionsEditor.Designer.cs">
+      <DependentUpon>LogOptionsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other windows\ImportExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other windows\ImportExport.Designer.cs">
+      <DependentUpon>ImportExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule module tools\HistoryVisualizer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Other windows\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other windows\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other windows\ActionEditorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other windows\ActionEditorWindow.Designer.cs">
+      <DependentUpon>ActionEditorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\ActionEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionEditor.Designer.cs">
+      <DependentUpon>ActionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\Editors\CustomActionEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Actions\Editors\CustomActionEditor.Designer.cs">
+      <DependentUpon>CustomActionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\Editors\MailActionEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Actions\Editors\MailActionEditor.Designer.cs">
+      <DependentUpon>MailActionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\Editors\PowerShell\PowershellActionEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Actions\Editors\PowerShell\PowershellActionEditor.Designer.cs">
+      <DependentUpon>PowershellActionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\Editors\PowerShell\PowerShellObjectResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actions\Editors\PowerShell\PowerShellObjectResults.Designer.cs">
+      <DependentUpon>PowerShellObjectResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\Editors\PowerShell\PowerShellObjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actions\Editors\PowerShell\PowerShellObjects.Designer.cs">
+      <DependentUpon>PowerShellObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\Editors\PowerShell\PowerShellRequiredDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actions\Editors\PowerShell\PowerShellRequiredDialog.Designer.cs">
+      <DependentUpon>PowerShellRequiredDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\IActionEditor.cs" />
+    <Compile Include="BackgoundTask.cs" />
+    <Compile Include="CommonDialog.cs" />
+    <Compile Include="Modules\ITool.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\IModule.cs" />
+    <Compile Include="Modules\Report Module\ReportModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Report Module\ReportModule.Designer.cs">
+      <DependentUpon>ReportModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\ScheduleModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\ScheduleModule.Designer.cs">
+      <DependentUpon>ScheduleModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\FileTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\FileTool.Designer.cs">
+      <DependentUpon>FileTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\FolderTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\FolderTool.Designer.cs">
+      <DependentUpon>FolderTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\FreeSpaceTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\FreeSpaceTool.Designer.cs">
+      <DependentUpon>FreeSpaceTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\PluginTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\PluginTool.Designer.cs">
+      <DependentUpon>PluginTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\CompletitionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\CompletitionDialog.Designer.cs">
+      <DependentUpon>CompletitionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\ExpressionDefinition.cs" />
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\FilterBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\FilterBox.Designer.cs">
+      <DependentUpon>FilterBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\AttributeFilterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\AttributeFilterView.Designer.cs">
+      <DependentUpon>AttributeFilterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\DateFilterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\DateFilterView.Designer.cs">
+      <DependentUpon>DateFilterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\IFilterView.cs" />
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\ImageFilterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\ImageFilterView.Designer.cs">
+      <DependentUpon>ImageFilterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\SizeFilterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\SizeFilterView.Designer.cs">
+      <DependentUpon>SizeFilterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\SearchTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\SearchTool.Designer.cs">
+      <DependentUpon>SearchTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\WipeStatusView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\WipeStatusView.Designer.cs">
+      <DependentUpon>WipeStatusView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\WipeTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\Wipe module tools\WipeTool.Designer.cs">
+      <DependentUpon>WipeTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\WipeModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wipe Module\WipeModule.Designer.cs">
+      <DependentUpon>WipeModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\RandomOptionsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Options\RandomOptionsEditor.Designer.cs">
+      <DependentUpon>RandomOptionsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\WipeOptionsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Options\WipeOptionsEditor.Designer.cs">
+      <DependentUpon>WipeOptionsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other windows\PasswordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other windows\PasswordDialog.Designer.cs">
+      <DependentUpon>PasswordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other windows\PluginError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other windows\PluginError.Designer.cs">
+      <DependentUpon>PluginError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other windows\StartWipeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other windows\StartWipeDialog.Designer.cs">
+      <DependentUpon>StartWipeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other windows\StatusWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other windows\StatusWindow.Designer.cs">
+      <DependentUpon>StatusWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other windows\StatusWindowElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Other windows\StatusWindowElement.Designer.cs">
+      <DependentUpon>StatusWindowElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other windows\TemplateName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other windows\TemplateName.Designer.cs">
+      <DependentUpon>TemplateName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\PanelEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\PanelExHost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\PanelExHost.designer.cs">
+      <DependentUpon>PanelExHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\PanelResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PanelResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\PanelSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\PanelSelectControl.Designer.cs">
+      <DependentUpon>PanelSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PanelResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReportExporter.cs" />
+    <Compile Include="Modules\Report Module\ReportSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Report Module\ReportSearch.Designer.cs">
+      <DependentUpon>ReportSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Shared Tools\ReportTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Shared Tools\ReportTool.Designer.cs">
+      <DependentUpon>ReportTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule module tools\ScheduleHistoryTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule module tools\ScheduleHistoryTool.Designer.cs">
+      <DependentUpon>ScheduleHistoryTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule Times\DailyScheduleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule Times\DailyScheduleEditor.Designer.cs">
+      <DependentUpon>DailyScheduleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule Times\MonthlyScheduleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule Times\MonthlyScheduleEditor.Designer.cs">
+      <DependentUpon>MonthlyScheduleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule Times\OneTimeScheduleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule Times\OneTimeScheduleEditor.Designer.cs">
+      <DependentUpon>OneTimeScheduleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule Times\WeeklyScheduleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\Schedule Times\WeeklyScheduleEditor.Designer.cs">
+      <DependentUpon>WeeklyScheduleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\ScheduleOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Schedule Module\ScheduleOptions.Designer.cs">
+      <DependentUpon>ScheduleOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SDResources.Designer.cs">
+      <DependentUpon>SDResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SmartPanel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartPanel.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowPosition.cs" />
+    <Compile Include="WipeMethods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WipeMethods.Designer.cs">
+      <DependentUpon>WipeMethods.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Actions\Editors\PowerShell\PowerShellScriptEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PowerShellScriptEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\LogOptionsEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LogOptionsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other windows\ImportExport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Schedule Module\Schedule module tools\HistoryVisualizer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HistoryVisualizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other windows\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other windows\ActionEditorWindow.resx">
+      <DependentUpon>ActionEditorWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actions\ActionEditor.resx">
+      <DependentUpon>ActionEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actions\Editors\CustomActionEditor.resx">
+      <DependentUpon>CustomActionEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actions\Editors\MailActionEditor.resx">
+      <DependentUpon>MailActionEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actions\Editors\PowerShell\PowershellActionEditor.resx">
+      <DependentUpon>PowershellActionEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actions\Editors\PowerShell\PowerShellObjectResults.resx">
+      <DependentUpon>PowerShellObjectResults.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actions\Editors\PowerShell\PowerShellObjects.resx">
+      <DependentUpon>PowerShellObjects.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actions\Editors\PowerShell\PowerShellRequiredDialog.resx">
+      <DependentUpon>PowerShellRequiredDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Report Module\ReportModule.resx">
+      <DependentUpon>ReportModule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Schedule Module\ScheduleModule.resx">
+      <DependentUpon>ScheduleModule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\FileTool.resx">
+      <DependentUpon>FileTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\FolderTool.resx">
+      <DependentUpon>FolderTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\FreeSpaceTool.resx">
+      <DependentUpon>FreeSpaceTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\PluginTool.resx">
+      <DependentUpon>PluginTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\Search filter views\CompletitionDialog.resx">
+      <DependentUpon>CompletitionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\Search filter views\FilterBox.resx">
+      <DependentUpon>FilterBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\AttributeFilterView.resx">
+      <DependentUpon>AttributeFilterView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\DateFilterView.resx">
+      <DependentUpon>DateFilterView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\ImageFilterView.resx">
+      <DependentUpon>ImageFilterView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\Search filter views\Views\SizeFilterView.resx">
+      <DependentUpon>SizeFilterView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\SearchTool.resx">
+      <DependentUpon>SearchTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\WipeStatusView.resx">
+      <DependentUpon>WipeStatusView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\Wipe module tools\WipeTool.resx">
+      <DependentUpon>WipeTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wipe Module\WipeModule.resx">
+      <DependentUpon>WipeModule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\RandomOptionsEditor.resx">
+      <DependentUpon>RandomOptionsEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\WipeOptionsEditor.resx">
+      <DependentUpon>WipeOptionsEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other windows\PasswordDialog.resx">
+      <DependentUpon>PasswordDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other windows\PluginError.resx">
+      <DependentUpon>PluginError.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other windows\StartWipeDialog.resx">
+      <DependentUpon>StartWipeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other windows\StatusWindow.resx">
+      <DependentUpon>StatusWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other windows\StatusWindowElement.resx">
+      <DependentUpon>StatusWindowElement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other windows\TemplateName.resx">
+      <DependentUpon>TemplateName.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\PanelEx.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PanelEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\PanelExHost.resx">
+      <DependentUpon>PanelExHost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\PanelResources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PanelResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\PanelSelectControl.resx">
+      <DependentUpon>PanelSelectControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelResources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PanelResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Report Module\ReportSearch.resx">
+      <DependentUpon>ReportSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Shared Tools\ReportTool.resx">
+      <DependentUpon>ReportTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Schedule Module\Schedule module tools\ScheduleHistoryTool.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScheduleHistoryTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Schedule Module\Schedule Times\DailyScheduleEditor.resx">
+      <DependentUpon>DailyScheduleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Schedule Module\Schedule Times\MonthlyScheduleEditor.resx">
+      <DependentUpon>MonthlyScheduleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Schedule Module\Schedule Times\OneTimeScheduleEditor.resx">
+      <DependentUpon>OneTimeScheduleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Schedule Module\Schedule Times\WeeklyScheduleEditor.resx">
+      <DependentUpon>WeeklyScheduleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Schedule Module\ScheduleOptions.resx">
+      <DependentUpon>ScheduleOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SDResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SDResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartPanel.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SmartPanel.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WipeMethods.resx">
+      <DependentUpon>WipeMethods.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_profile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creion32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_profile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dfsd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dsfsd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_profile3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTMLReportStyle.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\important.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load_profile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load_profile1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\method.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moduleSelector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moduleSelectorLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moduleSelectorLeftReversed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moduleSelectorReversed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moduleSelectorRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moduleSelectorRightReversed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_hdd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options_method.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P_Info_win.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal_data.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\powershell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\powershell_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\property.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\run.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safdgsd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedModuleSelector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedModuleSelectorLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedModuleSelectorLeftReversed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedModuleSelectorReversed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedModuleSelectorRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedModuleSelectorRightReversed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_disabled.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\succes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sucessfull.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol-Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\x.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2.ico" />
+    <None Include="Resources\logo_sd copy.png" />
+    <None Include="Resources\application_double.png" />
+    <None Include="Resources\cup.png" />
+    <None Include="Resources\wrench.png" />
+    <None Include="Resources\wrench_orange.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\page_world.png" />
+    <None Include="Resources\accept.png" />
+    <None Include="Resources\ruby.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\date.png" />
+    <None Include="Resources\up.png" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\calendar_view_day.png" />
+    <None Include="Resources\calendar_view_week.png" />
+    <None Include="Resources\calendar_view_month.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\rightpanel.ico" />
+    <None Include="Resources\back3.png" />
+    <None Include="Resources\separator2.PNG" />
+    <None Include="Resources\separator.PNG" />
+    <None Include="Resources\up1.png" />
+    <None Include="Resources\left_part2.PNG" />
+    <None Include="Resources\right_part2.PNG" />
+    <None Include="Resources\middle_part5.PNG" />
+    <None Include="Resources\right_part1.PNG" />
+    <None Include="Resources\left_part1.PNG" />
+    <None Include="Resources\middle_part4.PNG" />
+    <None Include="Resources\middle_part3.PNG" />
+    <None Include="Resources\middle_part2.PNG" />
+    <None Include="Resources\middle_part1.PNG" />
+    <None Include="Resources\middle_part.PNG" />
+    <None Include="Resources\right_part.PNG" />
+    <None Include="Resources\left_part.PNG" />
+    <None Include="Resources\back2.png" />
+    <None Include="Resources\back1.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\Untitled-31.PNG" />
+    <None Include="Resources\Untitled-3.PNG" />
+    <None Include="Resources\Untitled-1.JPG" />
+    <None Include="Resources\SecureDelete_about3.PNG" />
+    <None Include="Resources\SecureDelete_about21.PNG" />
+    <None Include="Resources\SecureDelete_about2.PNG" />
+    <None Include="Resources\SecureDelete_about1.PNG" />
+    <None Include="Resources\SecureDelete_about.PNG" />
+    <None Include="Resources\battery32.png" />
+    <None Include="Resources\battery24.png" />
+    <None Include="Resources\battery16.png" />
+    <None Include="Resources\battery.png" />
+    <None Include="Resources\delete.bmp" />
+    <None Include="Resources\RepeatHS.png" />
+    <None Include="Resources\OK1.bmp" />
+    <None Include="Resources\importexport.PNG" />
+    <None Include="Resources\password.PNG" />
+    <None Include="Resources\crash2.PNG" />
+    <None Include="Resources\plugincrash.PNG" />
+    <None Include="Resources\CopyHS.png" />
+    <None Include="Resources\OK.bmp" />
+    <None Include="Resources\Computer.ico" />
+    <None Include="Resources\FillDownHS.png" />
+    <None Include="Resources\FillUpHS.png" />
+    <None Include="Resources\ShowRulelinesHS.png" />
+    <None Include="Resources\HTMLPageHS1.png" />
+    <None Include="Resources\XMLFileHS.png" />
+    <None Include="Resources\RelationshipsHS.png" />
+    <None Include="Resources\CheckBoxHS.png" />
+    <None Include="Resources\Book_angleHS.png" />
+    <None Include="Resources\FormulaEvaluatorHS.png" />
+    <None Include="Resources\FunctionHS.png" />
+    <None Include="Resources\WindowsHS.png" />
+    <None Include="Resources\HTMLPageHS.png" />
+    <None Include="Resources\DeleteHS.png" />
+    <None Include="Resources\OptionsHS.png" />
+    <None Include="Resources\TaskHS.png" />
+    <None Include="Resources\performance.ico" />
+    <None Include="Resources\eventlog.ico" />
+    <None Include="Resources\graphhs.png" />
+    <None Include="Resources\saveHS.png" />
+    <None Include="Resources\openHS.png" />
+    <None Include="Resources\DocumentHS.png" />
+    <None Include="Resources\top_panel.ico" />
+    <None Include="Resources\audio.ico" />
+    <None Include="Resources\image.ico" />
+    <None Include="app.config" />
+    <None Include="Resources\run.ico" />
+    <None Include="Resources\down1.png" />
+    <None Include="Resources\pen.ico" />
+    <None Include="Resources\class1.ico" />
+    <None Include="Resources\class.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LGratian.TextParser\LGratian.TextParser\LGratian.TextParser.csproj">
+      <Project>{9C8F7E0F-2FDA-458D-A8D8-59094259841E}</Project>
+      <Name>LGratian.TextParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SecureDelete.NET\SecureDelete.NET\SecureDelete.NET.csproj">
+      <Project>{F9B13A62-1C48-4893-8D94-318639A45CE5}</Project>
+      <Name>SecureDelete.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\documents\Gratian\Documents\Visual Studio 2005\Projects\LGratian.Debugger\LGratian.Debugger\LGratian.Debugger.csproj">
+      <Project>{A3F3D314-84E1-4E62-8CFB-EE0F8BA0FFFF}</Project>
+      <Name>LGratian.Debugger</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

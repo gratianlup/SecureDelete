@@ -1,0 +1,10 @@
+D:\SecureDelete\SecureDelete\SecureDeleteFileStoreBrowser\bin\Debug\SecureDeleteFileStoreBrowser.exe
+D:\SecureDelete\SecureDelete\SecureDeleteFileStoreBrowser\bin\Debug\SecureDeleteFileStoreBrowser.pdb
+D:\SecureDelete\SecureDelete\SecureDeleteFileStoreBrowser\bin\Debug\LGratian.Debugger.dll
+D:\SecureDelete\SecureDelete\SecureDeleteFileStoreBrowser\bin\Debug\SecureDelete.NET.dll
+D:\SecureDelete\SecureDelete\SecureDeleteFileStoreBrowser\bin\Debug\WMListner.dll
+D:\SecureDelete\SecureDelete\SecureDeleteFileStoreBrowser\bin\Debug\LGratian.Debugger.pdb
+D:\SecureDelete\SecureDelete\SecureDeleteFileStoreBrowser\bin\Debug\LGratian.Debugger.xml
+D:\SecureDelete\SecureDelete\SecureDeleteFileStoreBrowser\bin\Debug\SecureDelete.NET.pdb
+D:\SecureDelete\SecureDelete\SecureDeleteFileStoreBrowser\bin\Debug\SecureDelete.NET.xml
+D:\SecureDelete\SecureDelete\SecureDeleteFileStoreBrowser\bin\Debug\WMListner.pdb

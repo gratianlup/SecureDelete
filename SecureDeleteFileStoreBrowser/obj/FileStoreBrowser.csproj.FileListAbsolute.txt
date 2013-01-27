@@ -1,0 +1,10 @@
+C:\Users\LG\Documents\Visual Studio 2005\Projects\FileStoreBrowser\FileStoreBrowser\bin\Debug\FileStoreBrowser.exe
+C:\Users\LG\Documents\Visual Studio 2005\Projects\FileStoreBrowser\FileStoreBrowser\bin\Debug\FileStoreBrowser.pdb
+C:\Users\LG\Documents\Visual Studio 2005\Projects\FileStoreBrowser\FileStoreBrowser\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\LG\Documents\Visual Studio 2005\Projects\FileStoreBrowser\FileStoreBrowser\obj\Debug\FileStoreBrowser.Form1.resources
+C:\Users\LG\Documents\Visual Studio 2005\Projects\FileStoreBrowser\FileStoreBrowser\obj\Debug\FileStoreBrowser.Properties.Resources.resources
+C:\Users\LG\Documents\Visual Studio 2005\Projects\FileStoreBrowser\FileStoreBrowser\obj\Debug\FileStoreBrowser.csproj.GenerateResource.Cache
+C:\Users\LG\Documents\Visual Studio 2005\Projects\FileStoreBrowser\FileStoreBrowser\obj\Debug\FileStoreBrowser.exe
+C:\Users\LG\Documents\Visual Studio 2005\Projects\FileStoreBrowser\FileStoreBrowser\obj\Debug\FileStoreBrowser.pdb
+C:\Users\LG\Documents\Visual Studio 2005\Projects\FileStoreBrowser\FileStoreBrowser\bin\Debug\SecureDelete.NET.dll
+C:\Users\LG\Documents\Visual Studio 2005\Projects\FileStoreBrowser\FileStoreBrowser\bin\Debug\SecureDelete.NET.pdb

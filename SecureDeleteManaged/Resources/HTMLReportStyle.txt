@@ -1,0 +1,93 @@
+.Normal {
+	border-bottom: thin solid #3F5280;
+	border-bottom-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.Header {
+	font-family: "Times New Roman", Times, serif;
+	font-size: xx-large;
+	color: #40526F;
+	margin-bottom: 1px;
+}
+.Subheader {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+	color: #000000;
+	margin-top: 1px;
+	margin-left:2px;
+}
+.Subtitle {
+	border-bottom: thin solid #3F5280;
+	font-family: "Times New Roman", Times, serif;
+	font-size: x-large;
+	color: #405371;
+	margin-top: 30px;
+	margin-bottom: 11px;
+}
+.Footer {
+	border-bottom: thin none #3F5280;
+	border-bottom-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 5px;
+	font-size: small;
+	color: #666666;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: thin;
+	border-top-color: #808080;
+	border-bottom-color: #3F5280;
+}
+.TableStyle {
+	border: 1px solid #808080;
+	padding: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+.TabelHeader {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #405371;
+}
+.HighSeverity {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFCCCC;
+	text-align: center;
+}
+.MediumSeverity {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFCC;
+	text-align: center;
+}
+.LowSeverity {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #C7E0F9;
+	text-align: center;
+}
+.TabelHeader2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #405371;
+	text-align: center;
+}
+.Normal2 {
+	border-bottom: thin solid #3F5280;
+	border-bottom-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+.BodyStyle {
+	background-color: #FFFFFF
+}
+.NavigatorStyle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #666666;
+	text-align: right;
+	margin-top: 5px;
+	padding-right: 3px;
+}

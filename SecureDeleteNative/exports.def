@@ -1,0 +1,19 @@
+LIBRARY	"SecureDeleteNative.DLL"
+EXPORTS
+	CreateWipeContext @1
+	DestroyWipeContext @2
+	InitializeWipeContext @3
+	StartWipeContext @4
+	StopWipeContext @5
+	PauseWipeContext @6
+	ResumeWipeContext @7
+	SetWipeOptions @8
+	InsertWipeObject @9
+	GetContextStatus @10
+	GetWipeStatus @11
+	GetFailedObjectNumber @12
+	GetFailedObject @13
+	GetErrorNumber @14
+	GetError @15
+	GetChildrenNumber @16
+	GetChildWipeStatus @17

@@ -1,0 +1,27 @@
+HKCR
+{
+	SDShellNative.SDShellExt.1 = s 'SDShellExt Class'
+	{
+		CLSID = s '{1A0EB35B-FD10-4B27-9679-843243151960}'
+	}
+	SDShellNative.SDShellExt = s 'SDShellExt Class'
+	{
+		CLSID = s '{1A0EB35B-FD10-4B27-9679-843243151960}'
+		CurVer = s 'SDShellNative.SDShellExt.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1A0EB35B-FD10-4B27-9679-843243151960} = s 'SDShellExt Class'
+		{
+			ProgID = s 'SDShellNative.SDShellExt.1'
+			VersionIndependentProgID = s 'SDShellNative.SDShellExt'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{02115FCC-D5F0-41C7-949B-CB4BE82D624B}'
+		}
+	}
+}

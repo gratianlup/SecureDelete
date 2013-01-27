@@ -1,0 +1,36 @@
+// SDShellNative.idl : IDL source for SDShellNative
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SDShellNative.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(F404D0B9-3BE2-4CE8-B80B-A01C77D22492),
+	dual,
+	nonextensible,
+	helpstring("ISDShellExt Interface"),
+	pointer_default(unique)
+]
+interface ISDShellExt : IDispatch{
+};
+[
+	uuid(02115FCC-D5F0-41C7-949B-CB4BE82D624B),
+	version(1.0),
+	helpstring("SDShellNative 1.0 Type Library")
+]
+library SDShellNativeLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(1A0EB35B-FD10-4B27-9679-843243151960),
+		helpstring("SDShellExt Class")
+	]
+	coclass SDShellExt
+	{
+		[default] interface ISDShellExt;
+	};
+};

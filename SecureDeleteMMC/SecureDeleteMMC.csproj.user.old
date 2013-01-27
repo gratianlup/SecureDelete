@@ -1,0 +1,7 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Windows\System32\mmc.exe</StartProgram>
+    <StartArguments>"C:\Users\LG\Documents\Visual Studio 2005\Projects\SecureDeleteMMC\SecureDeleteMMC\bin\Debug\SecureDeleteMMC.msc"</StartArguments>
+  </PropertyGroup>
+</Project>
