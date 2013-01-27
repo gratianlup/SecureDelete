@@ -6,6 +6,7 @@ Role of each component:
 
 
 The following documents and diagrams present the project in more detail:  
+
 **Download presentation document (PDF)**  
 **[Download SecureDeleteManaged diagram (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
 **[Download SecureDeleteNative diagram (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)**  
