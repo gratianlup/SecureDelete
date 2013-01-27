@@ -1,25 +1,23 @@
 SecureDelete
 ============
 
-Role of each component:  
-...
 
 
 The following documents and diagrams present the project in more detail:  
 
-**Download presentation document (PDF)**  
-**[Download SecureDeleteManaged diagram (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
-**[Download SecureDeleteNative diagram (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)**  
+**Download document describing the features and their implementation (PDF)**  
+**[Download diagram for the SecureDeleteManaged component (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
+**[Download diagram for the SecureDeleteNative component (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)**  
 
 
-**Architecture overview:**  
+### Architecture overview:
 
 ![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_architecture.PNG)  
 
 
-**Role of each component:**  
+### Component roles:
 
-**Screenshots:**  
+### Screenshots:
 
 Main window (adding a folder)  
 ![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_folder.PNG)  
