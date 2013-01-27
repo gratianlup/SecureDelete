@@ -3,7 +3,7 @@ SecureDelete
 
 
 
-The following documents and diagrams present the project in more detail:  
+### Architecture documents:  
 
 **Download document describing the features and their implementation (PDF)**  
 **[Download diagram for the SecureDeleteManaged component (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
