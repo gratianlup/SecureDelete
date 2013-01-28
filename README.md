@@ -23,7 +23,7 @@ SecureDelete
 **SecureDeleteFileStore**: Implements a "file-system in a file", used to store various objects and settings.  
 **SecureDeleteFileStoreBrowser**: Viewer and editor for FileStore-generated files.  
 **SecureDeleteMMC**: Exposes the GUI as a Microsoft Management Console plug-in.  
-**SecureDeleteManaged**: Exposes the functionality to .NET applications and adds features like file searching and filtering, sessions, actions, scheduling, reporting and plug-ins.  
+**SecureDeleteManaged**: Exposes the functionality to .NET applications and adds features like file searching and filtering, sessions, actions, scheduling, reporting and a plug-in framework.  
 **SecureDeleteNative**: Implements the main wiping functionality.  
 **SecureDeletePluginExample**: An example of a wipe plug-in.    
 **SecureDeletePluginWizard**: A wizard for creating wipe plug-ins that can be integrated with Visual Studio.  
