@@ -6,6 +6,7 @@ Notable is the inclusion of a partial implementation of the NTFS file system, us
 
 Main functionality written in C++, extended by a library written in C# with features like file filtering, scheduling and plug-ins, and a software interface build using WinForms available as a stand-alone application, Windows Shell extension and as a Microsoft Management Console plug-in
 
+
 ### Main features:  
 - Wiping of files, folders and free space on a disk.
 - Wiping of cluster tips, Alternate Data Streams and MFT file entries (under the NTFS file system).
