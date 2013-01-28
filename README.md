@@ -16,22 +16,22 @@ SecureDelete
 
 
 ### Component roles:
-SecureDeleteBridgeExample:  
-SecureDeleteClient:  
-SecureDeleteCrashReporter:  
-SecureDeleteDebugger:  
-SecureDeleteFileStore:  
-SecureDeleteFileStoreBrowser:  
-SecureDeleteMMC:  
-SecureDeleteManaged:  
-SecureDeleteNative:  
-SecureDeletePluginExample:  
-SecureDeletePluginWizard:  
-SecureDeleteShellExtensionClient:  
-SecureDeleteShellExtensionNative:  
-SecureDeleteTextParser:  
-SecureDeleteWinForms:  
-SecureDeleteWindowsMessageListener:  
+SecureDeleteBridgeExample: An example of a PowerSheel Action bridge object.  
+SecureDeleteClient: The main application hosting the GUI.  
+SecureDeleteCrashReporter: Reports information about the application crash to the developer.  
+SecureDeleteDebugger: Receives and displays debugging information from the application.  
+SecureDeleteFileStore: Implements a "file-system in a file", used to store various objects and settings.  
+SecureDeleteFileStoreBrowser: Viewer and editor for FileStore-generated files.  
+SecureDeleteMMC: Exposes the GUI as a Microsoft Management Console plug-in.  
+SecureDeleteManaged: Exposes the functionality to .NET applications and adds features like file searching and filtering, scheduling, reporting and plug-ins.  
+SecureDeleteNative: Implements the main wiping functionality.  
+SecureDeletePluginExample: An example of a wipe plug-in.    
+SecureDeletePluginWizard: A wizard for creating wipe plug-ins that can be integrated with Visual Studio.  
+SecureDeleteShellExtensionClient: Implements the GUI used when the application is invoked from the Windows Shell.  
+SecureDeleteShellExtensionNative: Implements a Windows Shell Extension that adds wipe functionality to the context menus.  
+SecureDeleteTextParser: Parses a text based on some predefined rules.    
+SecureDeleteWinForms: Implements the GUI for all modules of the application.  
+SecureDeleteWindowsMessageListener: A listener which sends messages to the debugger.    
 
 ### Screenshots:
 
