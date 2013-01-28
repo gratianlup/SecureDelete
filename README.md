@@ -5,9 +5,9 @@ SecureDelete
 
 The following documents describe the architecture in more detail:  
 
-**[Download document describing the features and their implementation (PDF)](http://www.gratianlup.com/documents/secure_delete_documentation.pdf)**  
-**[Download diagram for the SecureDeleteManaged component (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
-**[Download diagram for the SecureDeleteNative component (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)**  
+**[Download SecureDelete features and implementation details (PDF)](http://www.gratianlup.com/documents/secure_delete_documentation.pdf)**  
+**[Download SecureDeleteManaged diagram (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
+**[Download SecureDeleteNative diagram (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)**  
 
 ### Architecture overview:
 
