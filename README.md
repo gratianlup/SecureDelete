@@ -1,18 +1,37 @@
 SecureDelete
 ============
 
+An advanced and feature-rich application for securely deleting files and even entire drives.  
+Notable is the inclusion of a partial implementation of the NTFS file system, used to remove all traces of the files.  
 
+Main functionality written in C++, extended by a library written in C# with features like file filtering, scheduling and plug-ins, and a software interface build using WinForms available as a stand-alone application, Windows Shell extension and as a Microsoft Management Console plug-in
 
-The following documents describe the architecture in more detail:  
+### Main features:  
+- Wiping of files, folders and free space on a disk.
+- Wiping of cluster tips, Alternate Data Streams and MFT file entries (under the NTFS file system).
+- Built-in and user-defined wipe methods supporting patterns, random data and write verification.
+- Secure random number generators (ISAAC and Mersenne Twister) and seed generator.
+- Parallel wiping for targets found on separate physical disks.
+- Scheduling of wiping tasks with custom options and before/after actions.
+- Plug-in framework allows extending the existing functionality.
+- Actions that can be executed at the beginning/end of the wiping process.
+- PowerShell scripts can be used to controll the wiping process or scheduled tasks.
+- Windows Shell integration (context menu entries in Windows Explorer, Open/Save dialogs, etc.)
+- Microsoft Management Console integration.
+- Rich reporting, logging, debugging and crash protection capabilities.
+- Exporting and importing of options, wipe methods and scheduled tasks.
 
+For a complete list of features and some implementation details download the following document:  
 **[Download SecureDelete features and implementation details (PDF)](http://www.gratianlup.com/documents/secure_delete_documentation.pdf)**  
-**[Download SecureDeleteManaged diagram (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
-**[Download SecureDeleteNative diagram (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)**  
+
 
 ### Architecture overview:
 
 ![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_architecture.PNG)  
 
+The following documents describe the architecture in more detail:  
+**[Download SecureDeleteManaged diagram (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
+**[Download SecureDeleteNative diagram (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)**  
 
 ### Component roles:
 **SecureDeleteBridgeExample**: An example of a PowerSheel Action bridge object.  
