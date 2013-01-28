@@ -4,7 +4,7 @@ SecureDelete
 An advanced and feature-rich application for securely deleting files and even entire drives.  
 Notable is the inclusion of a partial implementation of the NTFS file system, used to remove all traces of the files.  
 
-Main functionality written in C++, extended by a library written in C# with features like file filtering, scheduling and plug-ins, and a software interface build using WinForms available as a stand-alone application, Windows Shell extension and as a Microsoft Management Console plug-in
+Main functionality written in *C++*, extended by a library written in *C#* with features like file filtering, scheduling and plug-ins, and a software interface build using *WinForms* available as a stand-alone application, *Windows Shell* extension and as a *Microsoft Management Console* plug-in
 
 
 ### Main features:  
