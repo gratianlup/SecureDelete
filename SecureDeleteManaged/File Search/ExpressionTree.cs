@@ -1,10 +1,34 @@
-// ***************************************************************
-//  SecureDelete   version:  1.0
-//  -------------------------------------------------------------
+// Copyright (c) 2007 Gratian Lup. All rights reserved.
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
 //
-//  Copyright (C) 2007 Lup Gratian - All Rights Reserved
-//   
-// ***************************************************************         
+// * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following
+// disclaimer in the documentation and/or other materials provided
+// with the distribution.
+//
+// * The name "SecureDelete" must not be used to endorse or promote
+// products derived from this software without prior written permission.
+//
+// * Products derived from this software may not be called "SecureDelete" nor
+// may "SecureDelete" appear in their names without prior written
+// permission of the author.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
 using System.Collections.Generic;
@@ -17,11 +41,13 @@ using System.Runtime.Serialization;
 
 namespace SecureDelete.FileSearch {
     public enum ExpressionType {
-        Implication, Filter
+        Implication,
+        Filter
     }
 
     public enum FilterImplication {
-        AND, OR
+        AND,
+        OR
     }
 
     [Serializable]
@@ -61,7 +87,6 @@ namespace SecureDelete.FileSearch {
             temp.Right = (ExpressionNode)Right.Clone();
             temp.Left.Parent = temp;
             temp.Right.Parent = temp;
-
             return temp;
         }
 
@@ -108,7 +133,8 @@ namespace SecureDelete.FileSearch {
     }
 
     public enum TreeDirection {
-        Left, Right
+        Left,
+        Right
     }
 
     [Serializable]
@@ -145,7 +171,6 @@ namespace SecureDelete.FileSearch {
         public void AddRoot(ExpressionType type, object item) {
             // check the parameters
             Debug.Assert(item != null, "Item is null");
-
             _root = NewNodeByType(type, item);
         }
 
@@ -163,14 +188,10 @@ namespace SecureDelete.FileSearch {
 
             if(direction == TreeDirection.Left) {
                 parent.Left = NewNodeByType(type, item);
-
-                // set Parent
                 parent.Left.Parent = parent;
             }
             else {
                 parent.Right = NewNodeByType(type, item);
-
-                // set Parent
                 parent.Right.Parent = parent;
             }
         }
@@ -192,7 +213,6 @@ namespace SecureDelete.FileSearch {
         public void RemoveChildren(ExpressionNode parent) {
             // check the parameters
             Debug.Assert(parent != null, "Parent is null");
-
             parent.Left = null;
             parent.Right = null;
         }
@@ -201,18 +221,15 @@ namespace SecureDelete.FileSearch {
         public void RemoveUngrouped(ExpressionNode parent) {
             // check the parameters
             Debug.Assert(parent != null, "Parent is null");
-
             RemoveUngroupedRecursive(parent);
         }
 
 
         private void RemoveUngroupedRecursive(ExpressionNode parent) {
-            // stop
             if(parent == null) {
                 return;
             }
 
-            // stop
             if(parent.Left == null && parent.Right == null) {
                 return;
             }
@@ -231,7 +248,6 @@ namespace SecureDelete.FileSearch {
         /// Method executed before serialization in order to destory the parent-child relationship
         /// </summary>
         public void DestroyParentChildRelationship(ExpressionNode parent) {
-            // stop
             if(parent == null) {
                 return;
             }
@@ -254,7 +270,6 @@ namespace SecureDelete.FileSearch {
         /// Method executed after deserialization in order to establish the parent-child relationship
         /// </summary>
         public void EstablishParentChildRelationship(ExpressionNode parent) {
-            // stop
             if(parent == null) {
                 return;
             }
@@ -304,7 +319,6 @@ namespace SecureDelete.FileSearch {
         public object Clone() {
             ExpressionTree temp = new ExpressionTree();
             temp._root = (ExpressionNode)_root.Clone();
-
             return temp;
         }
 
@@ -328,24 +342,23 @@ namespace SecureDelete.FileSearch {
 
 
     public class ExpressionTreeBuilder {
-        public static ExpressionTree AssociateFilters(FilterBase a, FilterBase b, FilterImplication implication) {
+        public static ExpressionTree AssociateFilters(FilterBase a, FilterBase b, 
+                                                      FilterImplication implication) {
             // check the parameters
             Debug.Assert(a != null && b != null, "Null parameters");
 
             ExpressionTree result = new ExpressionTree();
-
             result.AddRoot(ExpressionType.Implication, implication);
             result.AddNode(result.Root, TreeDirection.Left, ExpressionType.Filter, a);
             result.AddNode(result.Root, TreeDirection.Right, ExpressionType.Filter, b);
-
             return result;
         }
 
 
-        public static ExpressionTree AssociateTreeWithFilter(ExpressionTree tree, FilterBase filter, FilterImplication implication, TreeDirection treeDirection) {
+        public static ExpressionTree AssociateTreeWithFilter(ExpressionTree tree, FilterBase filter, 
+                                                             FilterImplication implication, TreeDirection treeDirection) {
             // check the parameters
             Debug.Assert(tree != null && filter != null, "Null parameters");
-
             ExpressionTree result = new ExpressionTree();
 
             if(treeDirection == TreeDirection.Left) {
@@ -368,11 +381,9 @@ namespace SecureDelete.FileSearch {
             Debug.Assert(a != null && b != null, "Null parameters");
 
             ExpressionTree result = new ExpressionTree();
-
             result.AddRoot(ExpressionType.Implication, implication);
             result.Root.Left = a.Root;
             result.Root.Right = b.Root;
-
             return result;
         }
     }

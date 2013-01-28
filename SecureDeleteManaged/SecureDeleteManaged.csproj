@@ -157,9 +157,7 @@
   <ItemGroup>
     <None Include="Resources\HTMLReportStyle.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="File Search\Filters\Audio filter\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SecureDeleteFileStore\SecureDeleteFileStore.csproj">
       <Project>{1e77f856-039e-40d7-a723-0d7b354f8daa}</Project>
