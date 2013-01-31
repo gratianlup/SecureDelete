@@ -76,10 +76,10 @@ Options window
 Options window (schedulling options)  
 ![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_options_scheduling.PNG)  
 
-MMC Snap-in (dashboard)  
+Microsoft Management Console Snap-in (dashboard)  
 ![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_mmc_overview.PNG)  
 
-MMC Snap-in (wipe module)  
+Microsoft Management Console Snap-in (wiping module)  
 ![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_mmc.png)  
 
 Import/export settings window  
