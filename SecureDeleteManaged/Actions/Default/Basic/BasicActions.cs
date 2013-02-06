@@ -37,7 +37,7 @@ using System.Diagnostics;
 
 namespace SecureDelete.Actions {
     [Serializable]
-    public sealed class ShutdownAction : CustomAction {
+    public sealed class ShutdownAction : CustomAction, ICloneable {
         public override string File {
             get { return "shutdown"; }
         }
@@ -45,11 +45,18 @@ namespace SecureDelete.Actions {
         public override string Arguments {
             get { return "-s"; }
         }
+
+        public object Clone() {
+            ShutdownAction temp = new ShutdownAction();
+            temp.Enabled = Enabled;
+            temp.File = (string)File.Clone();
+            return temp;
+        }
     }
 
 
     [Serializable]
-    public sealed class RestartAction : CustomAction {
+    public sealed class RestartAction : CustomAction, ICloneable {
         public override string File {
             get { return "shutdown"; }
         }
@@ -57,17 +64,31 @@ namespace SecureDelete.Actions {
         public override string Arguments {
             get { return "-r"; }
         }
+
+        public object Clone() {
+            RestartAction temp = new RestartAction();
+            temp.Enabled = Enabled;
+            temp.File = (string)File.Clone();
+            return temp;
+        }
     }
 
 
     [Serializable]
-    public sealed class LogoffAction : CustomAction {
+    public sealed class LogoffAction : CustomAction, ICloneable {
         public override string File {
             get { return "shutdown"; }
         }
 
         public override string Arguments {
             get { return "-l"; }
+        }
+
+        public object Clone() {
+            LogoffAction temp = new LogoffAction();
+            temp.Enabled = Enabled;
+            temp.File = (string)File.Clone();
+            return temp;
         }
     }
 }

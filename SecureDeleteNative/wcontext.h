@@ -652,6 +652,7 @@ inline int WCONTEXT::initialize() {
 	crc1 = crc2 = 0;
 	memset(&wstatus,0,sizeof(WSTATUS));
 	childrenNumber = 0;
+    return 1;
 }
 
 

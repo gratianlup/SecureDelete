@@ -325,7 +325,6 @@ namespace SecureDelete {
 
             // insert the object
             int result = NativeMethods.InsertWipeObject(_contextId, ref item);
-
             return ValidResult(result);
         }
 

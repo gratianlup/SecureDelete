@@ -726,6 +726,8 @@ inline unsigned char *FILE_RECORD::getAttributeRunlistAsByte() {
 	else if( lastAttribute->nonResidentFlag == 1 ) { // only for nonresident attributes
 		return &data[position + lastAttribute->attributes.nonResident.datarunOffset];
 	}
+
+    return NULL;
 }
 
 

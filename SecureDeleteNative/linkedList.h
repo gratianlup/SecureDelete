@@ -179,7 +179,7 @@ template <class T> inline T & LLIST<T>::operator[](unsigned long i) {
             xn = temp;
             return temp->data;
         }
-	}	
+	}
 }
 
 

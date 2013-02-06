@@ -226,7 +226,7 @@ namespace SecureDelete {
         /// </summary>
         /// <param name="context">The Id of the created context. </param>
         /// <returns>The error code of the operation.</returns>
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#1")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int CreateWipeContext(out int context);
 
 
@@ -235,53 +235,53 @@ namespace SecureDelete {
         /// </summary>
         /// <param name="context">The id of the context to destroy.</param>
         /// <returns>The error code of the operation.</returns>
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#2")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int DestroyWipeContext(int context);
 
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#3")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int InitializeWipeContext(int context);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#4")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int StartWipeContext(int context);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#5")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int StopWipeContext(int context);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#6")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int PauseWipeContext(int context);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#7")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int ResumeWipeContext(int context);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#8")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int SetWipeOptions(int context, ref WOptions wipeOptions);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#9")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int InsertWipeObject(int context, ref WObject wipeObject);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#10")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int GetContextStatus(int context);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#11")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int GetWipeStatus(int context, out WStatus wipeStatus);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#12")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int GetFailedObjectNumber(int context, out int failedNumber);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#13")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int GetFailedObject(int context, int position, out WSmallObject failedObject);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#14")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int GetErrorNumber(int context, out int errorNumber);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#15")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int GetError(int context, int position, out WError wipeError);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#16")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int GetChildrenNumber(int context, out int childrenNumber);
 
-        [DllImport("SecureDeleteNative.dll", EntryPoint = "#17")]
+        [DllImport("SecureDeleteNative.dll")]
         public static extern int GetChildWipeStatus(int context, int child, out WStatus wipeStatus);
 
         #endregion

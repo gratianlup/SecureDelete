@@ -21,7 +21,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\SDBuild\debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,9 +41,8 @@
     <AssemblyOriginatorKeyFile>SecureDeleteCrashReporter.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DebugUtils, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5b618f0bc795a4d3, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\documents\Gratian\Documents\Visual Studio 2008\Projects\DebugUtils\Build\Debug\DebugUtils.dll</HintPath>
+    <Reference Include="DebugUtils">
+      <HintPath>..\..\DebugUtils\Build\Debug\DebugUtils.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

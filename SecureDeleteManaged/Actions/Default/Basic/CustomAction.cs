@@ -269,7 +269,8 @@ namespace SecureDelete.Actions {
             }
             catch(Exception e) {
                 // something went wrong
-                ActionErrorReporter.ReportError(_session, _afterWipe, ErrorSeverity.High, StartFailedMessage, _file, e.Message);
+                ActionErrorReporter.ReportError(_session, _afterWipe, ErrorSeverity.High, 
+                                                StartFailedMessage, _file, e.Message);
                 return false;
             }
         }
@@ -313,13 +314,15 @@ namespace SecureDelete.Actions {
             if(_arguments != null) {
                 temp._arguments = (string)_arguments.Clone();
             }
+
             temp._enabled = _enabled;
             temp._file = (string)_file.Clone();
+
             if(_startupDirectory != null) {
                 temp._startupDirectory = (string)_startupDirectory;
             }
-            temp._maximumExecutionTime = _maximumExecutionTime;
 
+            temp._maximumExecutionTime = _maximumExecutionTime;
             return temp;
         }
 

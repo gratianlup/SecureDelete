@@ -346,7 +346,6 @@ namespace SecureDeleteWinForms.Modules {
             ScheduledTask task = (ScheduledTask)item.Tag;
 
             if(task.Status != TaskStatus.Stopped && task.Status != TaskStatus.Waiting) {
-                //TaskItemsHeader.Text = "Editing not allowed while task is running";
                 WipeItems.Enabled = false;
                 HistoryTool.Visible = false;
                 WipeItems.Visible = false;
@@ -354,8 +353,6 @@ namespace SecureDeleteWinForms.Modules {
                 return;
             }
             else {
-                //TaskItemsHeader.Text = "Scheduled Task Items";
-
                 // load the _session
                 WipeItems.Enabled = true;
                 WipeItems.Async = true;

@@ -239,14 +239,14 @@ namespace SecureDeleteWinForms {
                     editor.Schedule = (WeeklySchedule)_task.Schedule;
                     HostScheduleControl(editor);
                     break;
-                    }
+                }
                 case ScheduleType.Monthly: {
                     _task.Schedule = GetSchedule(ScheduleType.Monthly);
                     MonthlyScheduleEditor editor = new MonthlyScheduleEditor();
                     editor.Schedule = (MonthlySchedule)_task.Schedule;
                     HostScheduleControl(editor);
                     break;
-                    }
+                }
             }
         }
 

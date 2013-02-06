@@ -47,6 +47,7 @@ int WCONTEXT::wipeFileInfo(FILE_INFO *fileInfo,wchar_t *path) {
 	}
 	else {
 		//TODO:	return wipeFATFileInfo(fileInfo,path);
+        return 0;
 	}
 }
 

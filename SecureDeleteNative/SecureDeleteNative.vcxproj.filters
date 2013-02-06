@@ -113,11 +113,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="exports.def">
-      <Filter>Header Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -37,126 +37,88 @@
 
 WCONTEXT_MANAGER manager;
 
-extern "C" int CreateWipeContext(int *context) {
-	if( IsBadWritePtr(context, 1) ) {
-		return ERRORCODE_UNKNOWN;
-	}
-	
+extern "C" {
+__declspec(dllexport) int CreateWipeContext(int *context) {
 	return manager.createContext(context);
 }
 
-extern "C" int DestroyWipeContext(int context) {
+__declspec(dllexport) int DestroyWipeContext(int context) {
 	return manager.destroyContext(context);
 }
 
 
-extern "C" int InitializeWipeContext(int context) {
+__declspec(dllexport) int InitializeWipeContext(int context) {
 	return manager.initializeContext(context);
 }
 
 
-extern "C" int StartWipeContext(int context) {
+__declspec(dllexport) int StartWipeContext(int context) {
 	return manager.startContext(context);
 }
 
 
-extern "C" int StopWipeContext(int context) {
+__declspec(dllexport) int StopWipeContext(int context) {
 	return manager.stopContext(context);
 }
 
 
-extern "C"  int PauseWipeContext(int context) {
+__declspec(dllexport)  int PauseWipeContext(int context) {
 	return manager.pauseContext(context);
 }
 
 
-extern "C" int ResumeWipeContext(int context) {
+__declspec(dllexport) int ResumeWipeContext(int context) {
 	return manager.resumeContext(context);
 }
 
 
-extern "C" int SetWipeOptions(int context,WOPTIONS *wipeOptions) {
-	if( IsBadReadPtr(wipeOptions, 1) ) {
-		return ERRORCODE_UNKNOWN;
-	}
-	
+__declspec(dllexport) int SetWipeOptions(int context,WOPTIONS *wipeOptions) {
 	return manager.setWipeOptions(context,wipeOptions);
 }
 
 
-extern "C" int InsertWipeObject(int context,WEXTENDED_OBJECT *wipeObject) {
-	if( IsBadReadPtr(wipeObject, 1) ) {
-		return ERRORCODE_UNKNOWN;
-	}
-
+__declspec(dllexport) int InsertWipeObject(int context,WEXTENDED_OBJECT *wipeObject) {
 	return manager.insertWipeObject(context,wipeObject);
 }
 
 
-extern "C" int GetContextStatus(int context) {
+__declspec(dllexport) int GetContextStatus(int context) {
 	return manager.getContextStatus(context);
 }
 
 
-extern "C" int GetWipeStatus(int context,WSTATUS *wipeStatus) {
-	if( IsBadWritePtr(wipeStatus, 1) ) {
-		return ERRORCODE_UNKNOWN;
-	}
-
+__declspec(dllexport) int GetWipeStatus(int context,WSTATUS *wipeStatus) {
 	return manager.getWipeStatus(context,wipeStatus);
 }
 
 
-extern "C" int GetFailedObjectNumber(int context,int *failedNumber) {
-	if( IsBadWritePtr(failedNumber, 1) ) {
-		return ERRORCODE_UNKNOWN;
-	}
-
+__declspec(dllexport) int GetFailedObjectNumber(int context,int *failedNumber) {
 	return manager.getFailedObjectNumber(context,failedNumber);
 }
 
 
-extern "C" int GetFailedObject(int context,int position,WSMALL_OBJECT *failedObject) {
-	if( IsBadWritePtr(failedObject, 1) ) {
-		return ERRORCODE_UNKNOWN;
-	}
-
+__declspec(dllexport) int GetFailedObject(int context,int position,WSMALL_OBJECT *failedObject) {
 	return manager.getFailedObject(context,position,failedObject);
 }
 
 
-extern "C" int GetErrorNumber(int context,int *errorNumber) {
-	if( IsBadWritePtr(errorNumber, 1) ) {
-		return ERRORCODE_UNKNOWN;
-	}
-
+__declspec(dllexport) int GetErrorNumber(int context,int *errorNumber) {
 	return manager.getErrorNumber(context,errorNumber);
 }
 
 
-extern "C" int GetError(int context,int position,WIPE_ERROR2 *wipeError) {
-	if( IsBadWritePtr(wipeError, 1) ) {
-		return ERRORCODE_UNKNOWN;
-	}
-
+__declspec(dllexport) int GetError(int context,int position,WIPE_ERROR2 *wipeError) {
 	return manager.getError(context,position,wipeError);
 }
 
-extern "C" int GetChildrenNumber(int context,int *childrenNumber) {
-	if( IsBadWritePtr(childrenNumber, 1) ) {
-		return ERRORCODE_UNKNOWN;
-	}
-
+__declspec(dllexport) int GetChildrenNumber(int context,int *childrenNumber) {
 	return manager.getChildNumber(context,childrenNumber);
 }
 
-extern "C" int GetChildWipeStatus(int context,int child,WSTATUS *wipeStatus) {
-	if( IsBadWritePtr(wipeStatus, 1) ) {
-		return ERRORCODE_UNKNOWN;
-	}
-
+__declspec(dllexport) int GetChildWipeStatus(int context,int child,WSTATUS *wipeStatus) {
 	return manager.getChildWipeStatus(context,child,wipeStatus);
 }
+} // extern "C"
 
 
 /*

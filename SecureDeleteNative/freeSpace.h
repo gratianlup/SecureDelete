@@ -690,6 +690,8 @@ inline int WCONTEXT::wipeMultipleFreeSpace(wchar_t *volumes) {
 			break;
 		}
 	}
+
+    return ERRORCODE_SUCCESS;
 }
 
 

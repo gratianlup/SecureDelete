@@ -1,4 +1,4 @@
-LIBRARY	"SecureDeleteNative.DLL"
+LIBRARY	"SecureDeleteNative.dll"
 EXPORTS
 	CreateWipeContext @1
 	DestroyWipeContext @2
