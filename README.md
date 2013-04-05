@@ -34,6 +34,9 @@ The following documents describe the architecture in more detail:
 **[Download SecureDeleteManaged diagram (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
 **[Download SecureDeleteNative diagram (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)**  
 
+The following document describes some NTFS internals details (in Romanian):  
+**[Download NTFS internals details (PDF)](http://www.gratianlup.com/documents/ntfs_doc.pdf)**  
+
 ### Component roles:
 **SecureDeleteBridgeExample**: An example of a PowerSheel Action bridge object.  
 **SecureDeleteClient**: The main application hosting the GUI.  
