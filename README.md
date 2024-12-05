@@ -1,11 +1,10 @@
 SecureDelete
 ============
 
-An advanced and feature-rich application for securely deleting files and even entire drives.  
+A feature-rich application for securely deleting files and even entire drives.  
 Notable is the inclusion of a partial implementation of the NTFS file system, used to remove all traces of the files.  
 
 Main functionality written in *C++*, extended by a library written in *C#* with features like file filtering, scheduling and plug-ins, and a software interface build using *WinForms* available as a stand-alone application, *Windows Shell* extension and as a *Microsoft Management Console* plug-in
-
 
 ### Main features:  
 - Wiping of files, folders and free space on a disk.
@@ -23,19 +22,8 @@ Main functionality written in *C++*, extended by a library written in *C#* with 
 - Exporting and importing of options, wipe methods and scheduled tasks.
 
 For a complete list of features and some implementation details download the following document:  
-**[Download SecureDelete features and implementation details (PDF)](http://www.gratianlup.com/documents/secure_delete_documentation.pdf)**  
 
-
-### Architecture overview:
-
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_architecture.PNG)  
-
-The following documents describe the architecture in more detail:  
-**[Download SecureDeleteManaged diagram (PDF)](http://www.gratianlup.com/documents/secure_delete_managed_diagram.pdf)**  
-**[Download SecureDeleteNative diagram (PNG)](http://www.gratianlup.com/documents/secure_delete_native_diagram.png)**  
-
-The following document describes some NTFS internals details (in Romanian):  
-**[Download NTFS internals details (PDF)](http://www.gratianlup.com/documents/ntfs_doc.pdf)**  
+[Features and implementation (PDF)](https://github.com/user-attachments/files/18029653/secure_delete.pdf)
 
 ### Component roles:
 **SecureDeleteBridgeExample**: An example of a PowerSheel Action bridge object.  
@@ -55,35 +43,3 @@ actions, scheduling, reporting, a plug-in framework and exporting/importing sett
 **SecureDeleteTextParser**: Parses a text based on some predefined rules.    
 **SecureDeleteWinForms**: Implements the GUI for all modules of the application.  
 **SecureDeleteWindowsMessageListener**: A listener which sends messages to the debugger.    
-
-### Screenshots:
-
-Main window (adding a folder)  
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_folder.PNG)  
-
-Main window (adding a folder using advanced filters)  
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_folder_filters.PNG)  
-
-Scheduled wipe task options (execution time configuration)  
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_schedule_options.PNG)  
-
-Scheduled wipe task options (actions to run after execution)  
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_schedule_action_custom.PNG)  
-
-PowerShell action editor (can be run after/before a wipe task)  
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_schedule_action_powershell.PNG)  
-
-Options window  
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_options_general.PNG)  
-
-Options window (schedulling options)  
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_options_scheduling.PNG)  
-
-Microsoft Management Console Snap-in (dashboard)  
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_mmc_overview.PNG)  
-
-Microsoft Management Console Snap-in (wiping module)  
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_mmc.png)  
-
-Import/export settings window  
-![SmartFlip screenshot](http://www.gratianlup.com/documents/secure_delete_export.PNG)  
